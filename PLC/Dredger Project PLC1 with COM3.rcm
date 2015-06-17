@@ -1,0 +1,1465 @@
+[Version]=214
+[Title]=
+[Company]=
+[Designer]=
+M0::1.Storage Tank Status
+M1::1.Service Tank
+M2::1.Engine 1 Status
+M3::1.Engine 2 Status
+M4::2.Storage Tank Status
+M5::2.Service Tank
+M6::2.Engine 1 Status
+M7::2.Engine 2 Status
+M8::3.Storage Tank Status
+M9::3.Service Tank
+M10::3.Engine 1 Status
+M11::3.Engine 2 Status
+M12::4.Storage Tank Status
+M13::4.Service Tank
+M14::4.Engine 1 Status
+M15::4.Engine 2 Status
+M16::5.Storage Tank Status
+M17::5.Service Tank
+M18::5.Engine 1 Status
+M19::5.Engine 2 Status
+M20::6.Storage Tank Status
+M21::6.Service Tank
+M22::6.Engine 1 Status
+M23::6.Engine 2 Status
+M24::PAGE 1 
+M25::PAGE 2
+M26::PAGE 3 
+M27::PAGE 4 
+M28::PAGE 5 
+M29::PAGE 6 
+M1000::Normally open contact (a contact). This contact is ON when running and it is ON when the status is set to RUN.
+M1001::Normally OFF contact (b contact). This contact is OFF in running and it is OFF when the status is set to RUN.
+M1002::ON only for 1 scan after RUN. Initial pulse is contact a. It will get positive pulse in the RUN moment. Pulse width=scan period. 
+M1003::OFF only for 1 scan after RUN. Initial pulse is contact a. It will get negative pulse in the RUN moment. Pulse width=scan period.
+M1004::On when error occurs
+M1005::Password of data backup memory card and MPU password don't match
+M1006::Data backup memory card isn't initial
+M1007::Data doesn¡¦t exist in the program area of data backup memory card
+M1008::Monitor timer flag (ON: PLC WDT time out)
+M1009::When 24VDC is not sufficient that causes LV signal, M1009 will be ON
+M1010::ES/EX/SS and SC/SA/SX: PLSY Y0 mode selection. It is continuous output when it is ON.EH:PULSE will be output at the END.
+M1011::10ms clock pulse, 5ms On/5ms Off
+M1012::100ms clock pulse, 50ms On / 50ms Off
+M1013::1s clock pulse, 0.5s On / 0.5s Off
+M1014::1min clock pulse, 30s On / 30s Off
+M1015::High-speed timer activates
+M1016::When it is Off, it will display two right-most bits. When it is On, it will display (two right-most bits + 2000).
+M1017::30 seconds adjustment in RTC
+M1018::Flag for Radian/Degree, On for degree
+M1019::Start-up flag of frequency measurement card
+M1020::Zero flag
+M1021::Borrow flag
+M1022::Carry flag
+M1023::PLSY Y1 mode selection, it is continuous output when it is ON.
+M1024::COM1 Monitor request
+M1025::If PLC receive illegal communication request when HPP, PC or HMI connects to PLC, M1025 will be set and save the error code in D1025.
+M1026::SC/SA/SX and EH: Startup flag of RAMP module
+M1027::PR output flag
+M1028::10ms/100ms time switch flag. The base setting flag of T64~T126 is 100ms, when timer is OFF and the base setting flag is 10ms when it is ON. 
+M1029::ES/EX/SS and SC/SA/SX: Pulse output Y0 of PLSY and PLSR command execution completed or other relative command execution completed  EH: The first group pulse CH0 (Y0, Y1) output complete executing or other relative command execution completed
+M1030::ES/EX/SS and SC/SA/SX: Pulse output Y1 of PLSY and PLSR command execution completed  EH: The second group pulse CH1 (Y2, Y3) output complete executing
+M1031::Clear all non-latched memory
+M1032::Clear all latched memory
+M1033::Memory latched at STOP
+M1034::All Y outputs disable
+M1035::Start X input point to be RUN/STOP switch and correspond to D1035 (for SA models, only X7¡Bfor SX models, only X3¡Bfor SC models, only X5 can be used)
+M1036::SPD can be used with X0~X5 at the same time to detect starting speed flag (for SCV1.4 or over models)
+M1039::Constant scan mode
+M1040::Step transition inhibit
+M1041::Step transition starts
+M1042::Start pulse
+M1043::Zero point return completed
+M1044::Zero point condition
+M1045::All outputs clear inhibit
+M1046::STL state setting (On)
+M1047::STL monitor enable
+M1048::Flag for alarm point state
+M1049::Monitor flag for alarm point
+M1050::I001 masked
+M1051::I101 masked
+M1052::I201 masked
+M1053::I301 masked
+M1054::I401 masked
+M1055::I501 masked
+M1056::I6 masked
+M1057::I7 masked
+M1059::I010~I060 masked
+M1060::System error message 1
+M1061::System error message 2
+M1062::System error message 3
+M1063::System error message 4
+M1064::Operator error
+M1065::Syntax error
+M1066::Program error
+M1067::Program execution error
+M1068::Execution error locked (D1068)
+M1070::ES/EX/SS and SC/SA/SX: PWM Y1 output pulse exchange unit, ON for 100us and OFF for 1ms.EH: PWM Y0 pulse exchange unit, ON for 100us (for those after V1.2, pulse exchange unit is decided by D1371), OFF for 1 ms.
+M1071::PWM Y2 pulse exchange unit, ON for 100us (for those after V1.2, pulse exchange unit is decided by D1372), OFF for 1 ms.
+M1072::Execute PLC RUN command
+M1073::System used
+M1074::System used
+M1075::FLASH write error 
+M1076::Real time clock error
+M1077::Battery voltage is too low or malfunction 
+M1078::PLSY command Y0 pulse output stop immediately flag
+M1079::PLSY command Y1 pulse output stop immediately flag
+M1080::COM2 Monitor request
+M1081::FLT command change direction flag
+M1082::Flag changed for RTC
+M1083::Enable/Disable execute interrupt program in FROM/TO mode
+M1086::Set the ON/OFF switch of password function for DVP-PCC01
+M1087::LV signal operation flag
+M1088::Matrix compared flag. If the result is the same, M1088 = 1. If the result is different, M1088 = 0.
+M1089::Matrix search start flag. Compare from the first bit and M1090=1.
+M1090::Matrix search start flag. Compare from the first bit and M1090=1.
+M1091::Matrix finding bit flag. When find it, it will stop comparing and M1091=1.
+M1092::Matrix pointer error flag. When pointer Pr exceeds this range, M1092=1.
+M1093::Matrix pointer increases flag. It will add 1 to present pointer.
+M1094::Matrix pointer clears flag. It will clear present pointer to 0.
+M1095::Carry flag for matrix rotate/shift output
+M1096::Complement flag for matric shift input
+M1097::Direction flag for matrix rotate/shift
+M1098::Matrix count bit 0 or 1 flag
+M1099::It is On when matrix count result 0
+M1100::A sampling flag of SPD command 
+M1101::To decide whether start file register or not 
+M1102::Y10 end flag of pulse output (SC series models only)
+M1103::Y11 end flag of pulse output (SC series models only)
+M1104::SW1 state of DIP switch function card (DVP-F8ID) / AX0 input of 4DI card (DVP-F4IP) (isolated by photocoupler)
+M1105::SW2 state of DIP switch function card (DVP-F8ID) / AX1 input of 4DI card (DVP-F4IP) (isolated by photocoupler)
+M1106::SW3 state of DIP switch function card (DVP-F8ID) / AX2 input of 4DI card (DVP-F4IP) (isolated by photocoupler)
+M1107::SW4 state of DIP switch function card (DVP-F8ID) / AX3 input of 4DI card (DVP-F4IP) (isolated by photocoupler)
+M1108::SW5 state of DIP switch function card (DVP-F8ID)
+M1109::SW6 state of DIP switch function card (DVP-F8ID)
+M1110::SW7 state of DIP switch function card (DVP-F8ID)
+M1111::SW8 state of DIP switch function card (DVP-F8ID)
+M1112::AY0 output (transistor output) of 2DO card (DVP-F2OT)
+M1113::AY1 output (transistor output) of 2DO card (DVP-F2OT)
+M1115::Start switch for accel/decel pulse output
+M1116::Acceleration flag for accel/decel pulse output
+M1117::Target attained frequency flag for accel/decel pulse output
+M1118::Deceleration flag for accel/decel pulse output
+M1119::Completed function flag for accel/decel pulse output
+M1120::COM2(RS-485) Communication protocol holding (communication protocol will be the original setting even if D1120 is changed)
+M1121::RS-485 Communication data transmission ready
+M1122::Sending request
+M1123::Receiving completed
+M1124::Receiving wait
+M1125::Communication reset
+M1126::STX/ETX user/system selection
+M1127::MODRD/RDST/MODRW instructions. Data receiving is completed, RS instruction doesn’t include.
+M1128::Sending / Receiving 
+M1129::Receiving time out
+M1130::STX/ETX selection
+M1131::MODRD/RDST/MODRW, M1131=On when data convert to HEX
+M1132::When it is On, it denotes that there is no relative communication instruction in PLC program.
+M1133::SA/SX: special high-speed pulse Y0 (50kHz) starting flag for outputSCV1.4 or over: synchronous control for two axes, starting flag of Y10 output.
+M1134::Special high-speed pulse Y0 (50kHz) output. ON for constant output switch (SC doesn¡¦t support)
+M1135::SA/SX: arrival flag for special high-speed pulse Y0 (50kHz) output number.SCV1.4 or over: synchronous control for two axes, starting flag of Y11 output
+M1136::COM3 communication protocol holding
+M1138::COM1 (RS-232) communication protocol holding. D1036 modification invalid after setting.
+M1139::When SLAVE mode, ASCII/RTU selection for COM1 (RS-232). OFF for ASCII mode and  ON for RTU mode.
+M1140::MODRD/MODWR/MODRW data received error
+M1141::MODRD/MODWR/MODRW command error
+M1142::VFD-A command data received error
+M1143::1.COM2(RS-485) ASCII/RTU mode selections when PLC is SLAVE (it is Off when in ASCII mode and it is On when in RTU)  2.COM2(RS-485) ASCII/RTU mode selections when PLC is MASTER (used with MODRD/ MODWR/MODRW instructions) (it is Off when in ASCII mode and it is On when in RTU mode)
+M1144::Ouput start switch of accel/decel pulse output function of adjustable slope
+M1145::Acceleration flag of accel/decel pulse output function of adjustable slope
+M1146::Target attained frequency flag of accel/decel pulse output function of adjustable slope
+M1147::Deceleration flag of accel/decel pulse output function of adjustable slope
+M1148::Complete function flag of accel/decel pulse output function of adjustable slope
+M1149::Stop counting temporality flag of accel/decel pulse output function of adjustable slope
+M1150::Declare DHSZ command used for multi-group settings comparison mode
+M1151::Finish executing multi-group settings comparison mode
+M1152::Declare DHSZ command used to be frequency control mode
+M1153::Finish executing frequency control mode
+M1154::Start designated deceleration function flag of accel/decel pulse output function of adjustable slope
+M1161::8/16 bits mode (it is On when in 8 bits mode)
+M1162::Using flag for the integral of decimal system and the floating point of binary systems. ON for the floating point of binary.
+M1167::HKY input is 16 bits mode
+M1168::SMOV working mode indication
+M1169::PWD mode selection
+M1170::Start executing single step
+M1171::Execute single step
+M1172::2-phase pulse output switch (on is start)
+M1173::On is continuous output switch
+M1174::Output pulse number attained flag
+M1178::VR0 potentiometer starts
+M1179::VR1 potentiometer starts
+M1184::Startup MODEM 
+M1185::Start to initiate MODEM 
+M1186::Fail to initiate MODEM
+M1187::Finish initiating MODEM
+M1188::Display if current MODEM is on-line or not
+M1196::Number system stting (Off: Dec, On: Hex) (provided for DVP-SX series only)
+M1197::Display the decimal point at the right-most of number (provided for DVP-SX series only)
+M1198::Display the decimal point between two digitals (provided for DVP-SX series only)
+M1199::System used
+M1200::C200 counting mode (on: count down)
+M1201::C201 counting mode (on: count down)
+M1202::C202 counting mode (on: count down)
+M1203::C203 counting mode (on: count down)
+M1204::C204 counting mode (on: count down)
+M1205::C205 counting mode (on: count down)
+M1206::C206 counting mode (on: count down)
+M1207::C207 counting mode (on: count down)
+M1208::C208 counting mode (on: count down)
+M1209::C209 counting mode (on: count down)
+M1210::C210 counting mode (on: count down)
+M1211::C211 counting mode (on: count down)
+M1212::C212 counting mode (on: count down)
+M1213::C213 counting mode (on: count down)
+M1214::C214 counting mode (on: count down)
+M1215::C215 counting mode (on: count down)
+M1216::C216 counting mode (on: count down)
+M1217::C217 counting mode (on: count down)
+M1218::C218 counting mode (on: count down)
+M1219::C219 counting mode (on: count down)
+M1220::C220 counting mode (on: count down)
+M1221::C221 counting mode (on: count down)
+M1222::C222 counting mode (on: count down)
+M1223::C223 counting mode (on: count down)
+M1224::C224 counting mode (on: count down)
+M1225::C225 counting mode (on: count down)
+M1226::C226 counting mode (on: count down)
+M1227::C227 counting mode (on: count down)
+M1228::C228 counting mode (on: count down)
+M1229::C229 counting mode (on: count down)
+M1230::C230 counting mode (on: count down)
+M1231::C231 counting mode (on: count down)
+M1232::C232 counting mode (on: count down)
+M1233::C233 counting mode (on: count down)
+M1234::C234 counting mode (on: count down)
+M1235::C235 counting mode (on: count down)
+M1236::C236 counting mode (on: count down)
+M1237::C237 counting mode (on: count down)
+M1238::C238 counting mode (on: count down)
+M1239::C239 counter mode setting (on: count down)
+M1240::C240 counter mode setting (on: count down)
+M1241::C241 counter mode setting (on: count down)
+M1242::C242 counter mode setting (on: count down)
+M1243::C243 counter mode setting (on: count down)
+M1244::C244 counter mode setting (on: count down)
+M1245::C245 counter mode setting (on: count down)
+M1246::C246 counter monitor (on: count down)
+M1247::C247 counter monitor (on: count down)
+M1248::C248 counter monitor (on: count down)
+M1249::C249 counter monitor (on: count down)
+M1250::C250 counter monitor (on: count down)
+M1251::C251 counter monitor (on: count down)
+M1252::C252 counter monitor (on: count down)
+M1253::C254 counter monitor (on: count down)
+M1254::C254 counter monitor (on: count down)
+M1256::System used
+M1258::Swap Y0 and Y1 pulse output signal
+M1259::Swap Y2 and Y3 pulse output signal
+M1260::Let X5 be the reset input signal of all high-speed counter
+M1261::DHSCR command High-speed comparison flag
+M1264::HHSC0 Reset function enable
+M1265::HHSC0 Start function enable
+M1266::HHSC1 Reset function enable
+M1267::HHSC1 Start function enable
+M1268::HHSC2 Reset function enable
+M1269::HHSC2 Start function enable
+M1270::HHSC3 Reset function enable
+M1271::HHSC3 Start function enable
+M1272::HHSC0 Reset control
+M1273::HHSC0 Start control
+M1274::HHSC1 Reset control
+M1275::HHSC1 Start control
+M1276::HHSC2 Reset control
+M1277::HHSC2 Start control
+M1278::HHSC3 Reset control
+M1279::HHSC3 Start control
+M1280::I00 masked
+M1281::I10 masked
+M1282::I20 masked	
+M1283::I30 masked
+M1284::I40 masked
+M1285::I50 masked
+M1286::I6 masked
+M1287::I7 masked
+M1288::I8 masked
+M1289::I010 masked
+M1290::I020 masked
+M1291::I030 masked
+M1292::I040 masked
+M1293::I050 masked
+M1294::I060 masked
+M1295::I110 masked
+M1296::I120 masked
+M1297::I130 masked
+M1298::I140 masked
+M1299::I150 masked
+M1300::I160 masked
+M1301::I170 masked
+M1302::I180 masked
+M1303::Swap high and low byte
+M1304::X input point can decide to be On-Off
+M1305::PLSV, DPLSV, DRVI, DDRVI, DRVA, DDRVA CH0(Y0¡BY1) the flag of opereation in reverse
+M1306::PLSV, DPLSV, DRVI, DDRVI, DRVA, DDRVA CH1(Y2¡BY3) the flag of operation inreverse
+M1310::Starting flag for immediately shut down Y10 pulse output (for SCV1.4 or over models)
+M1311::Starting flag for immediately shut down Y11 pulse output (for SCV1.4 or over models)
+M1312::C235 Start input point control 
+M1313::C236 Start input point control 
+M1314::C237 Start input point control 
+M1315::C238 Start input point control 
+M1316::C239 Start input point control 
+M1317::C240 Start input point control 
+M1320::C235 Reset input point control 
+M1321::C236 Reset input point control 
+M1322::C237 Reset input point control 
+M1323::C238 Reset input point control 
+M1324::C239 Reset input point control 
+M1325::C240 Reset input point control 
+M1328::C235 Start/Reset function enable 
+M1329::C236 Start/Reset function enable 
+M1330::C237 Start/Reset function enable 
+M1331::C238 Start/Reset function enable 
+M1332::C239 Start/Reset function enable 
+M1333::C240 Start/Reset function enable 
+M1334::Stop CH0 (Y0, Y1) pulse output temporarily
+M1335::Stop CH1 (Y2, Y3) pulse output temporarily
+M1336::CH0 (Y0, Y1) pulse send flag 
+M1337::CH1 (Y2, Y3) pulse send flag 
+M1338::Start CH0 (Y0, Y1) offset pulse flag
+M1339::Start CH1 (Y2, Y3) offset pulse flag
+M1340::To have interrupt (I110) after finishing sending CH0 (Y0, Y1) pulse 
+M1341::To have interrupt (I120) after finishing sending CH1 (Y2, Y3) pulse
+M1342::To have interrupt (I130) at the same time that sending CH0 (Y0, Y1) pulse
+M1343::To have interrupt (I140) at the same time that sending CH1 (Y2, Y3) pulse
+M1344::Start CH0 (Y0, Y1) compensation pulse flag 
+M1345::Start CH1 (Y2, Y3) compensation pulse flag
+M1346::ZRN CLEAR output signal enable
+M1347::PLSY instruction, reset CH0 (Y0, Y1) pulse after finishing output
+M1348::PLSY instruction, reset CH1 (Y2, Y3) pulse after finishing output
+M1350::Enable the function of PLC Link
+M1351::Enable auto mode on PLC Link
+M1352::Enable manual mode on PLC Link
+M1353::Enable 32 slave units linkage and up to 100 data length of data exchange on PLC Link
+M1354::Enable simultaneous data read/write in a polling of PLC LinkREAD/WRITE FUNCTION
+M1360::Slave ID#1 status on PLC Link network
+M1361::Slave ID#2 status on PLC Link network
+M1362::Slave ID#3 status on PLC Link network
+M1363::Slave ID#4 status on PLC Link network
+M1364::Slave ID#5 status on PLC Link network
+M1365::Slave ID#6 status on PLC Link network
+M1366::Slave ID#7 status on PLC Link network
+M1367::Slave ID#8 status on PLC Link network
+M1368::Slave ID#9 status on PLC Link network
+M1369::Slave ID#10 status on PLC Link network
+M1370::Slave ID#11 status on PLC Link network
+M1371::Slave ID#12 status on PLC Link network
+M1372::Slave ID#13 status on PLC Link network
+M1373::Slave ID#14 status on PLC Link network
+M1374::Slave ID#15 status on PLC Link network
+M1375::Slave ID#16 status on PLC Link network
+M1376::Indicating Slave ID#1 data transaction status on PLC Link
+M1377::Indicating Slave ID#2 data transaction status on PLC Link
+M1378::Indicating Slave ID#3 data transaction status on PLC Link
+M1379::Indicating Slave ID#4 data transaction status on PLC Link
+M1380::Indicating Slave ID#5 data transaction status on PLC Link
+M1381::Indicating Slave ID#6 data transaction status on PLC Link
+M1382::Indicating Slave ID#7 data transaction status on PLC Link
+M1383::Indicating Slave ID#8 data transaction status on PLC Link
+M1384::Indicating Slave ID#9 data transaction status on PLC Link
+M1385::Indicating Slave ID#10 data transaction status on PLC Link
+M1386::Indicating Slave ID#11 data transaction status on PLC Link
+M1387::Indicating Slave ID#12 data transaction status on PLC Link
+M1388::Indicating Slave ID#13 data transaction status on PLC Link
+M1389::Indicating Slave ID#14 data transaction status on PLC Link
+M1390::Indicating Slave ID#15 data transaction status on PLC Link
+M1391::Indicating Slave ID#16 data transaction status on PLC Link
+M1392::Slave ID#1 linking error
+M1393::Slave ID#2 linking error
+M1394::Slave ID#3 linking error
+M1395::Slave ID#4 linking error
+M1396::Slave ID#5 linking error
+M1397::Slave ID#6 linking error
+M1398::Slave ID#7 linking error
+M1399::Slave ID#8 linking error
+M1400::Slave ID#9 linking error
+M1401::Slave ID#10 linking error
+M1402::Slave ID#11 linking error
+M1403::Slave ID#12 linking error
+M1404::Slave ID#13 linking error
+M1405::Slave ID#14 linking error
+M1406::Slave ID#15 linking error
+M1407::Slave ID#16 linking error
+M1408::Indicating reading from Salve ID#1 is completed
+M1409::Indicating reading from Salve ID#2 is completed
+M1410::Indicating reading from Salve ID#3 is completed
+M1411::Indicating reading from Salve ID#4 is completed
+M1412::Indicating reading from Salve ID#5 is completed
+M1413::Indicating reading from Salve ID#6 is completed
+M1414::Indicating reading from Salve ID#7 is completed
+M1415::Indicating reading from Salve ID#8 is completed
+M1416::Indicating reading from Salve ID#9 is completed
+M1417::Indicating reading from Salve ID#10 is completed
+M1418::Indicating reading from Salve ID#11 is completed
+M1419::Indicating reading from Salve ID#12 is completed
+M1420::Indicating reading from Salve ID#13 is completed
+M1421::Indicating reading from Salve ID#14 is completed
+M1422::Indicating reading from Salve ID#15 is completed
+M1423::Indicating reading from Salve ID#16 is completed
+M1424::Indicating writing to Salve ID#1 is completed
+M1425::Indicating writing to Salve ID#2 is completed
+M1426::Indicating writing to Salve ID#3 is completed
+M1427::Indicating writing to Salve ID#4 is completed
+M1428::Indicating writing to Salve ID#5 is completed
+M1429::Indicating writing to Salve ID#6 is completed
+M1430::Indicating writing to Salve ID#7 is completed
+M1431::Indicating writing to Salve ID#8 is completed
+M1432::Indicating writing to Salve ID#9 is completed
+M1433::Indicating writing to Salve ID#10 is completed
+M1434::Indicating writing to Salve ID#11 is completed
+M1435::Indicating writing to Salve ID#12 is completed
+M1436::Indicating writing to Salve ID#13 is completed
+M1437::Indicating writing to Salve ID#14 is completed
+M1438::Indicating writing to Salve ID#15 is completed
+M1439::Indicating writing to Salve ID#16 is completed
+M1440::PLC LINK SLAVE ID 17 exists
+M1441::PLC LINK SLAVE ID 18 exists
+M1442::PLC LINK SLAVE ID 19 exists
+M1443::PLC LINK SLAVE ID 20 exists
+M1444::PLC LINK SLAVE ID 21 exists
+M1445::PLC LINK SLAVE ID 22 exists
+M1446::PLC LINK SLAVE ID 23 exists
+M1447::PLC LINK SLAVE ID 24 exists
+M1448::PLC LINK SLAVE ID 25 exists
+M1449::PLC LINK SLAVE ID 26 exists
+M1450::PLC LINK SLAVE ID 27 exists
+M1451::PLC LINK SLAVE ID 28 exists
+M1452::PLC LINK SLAVE ID 29 exists
+M1453::PLC LINK SLAVE ID 30 exists
+M1454::PLC LINK SLAVE ID 31 exists
+M1455::PLC LINK SLAVE ID 32 exists
+M1456::PLC LINK SLAVE ID 17 acts
+M1457::PLC LINK SLAVE ID 18 acts
+M1458::PLC LINK SLAVE ID 19 acts
+M1459::PLC LINK SLAVE ID 20 acts
+M1460::PLC LINK SLAVE ID 21 acts
+M1461::PLC LINK SLAVE ID 22 acts
+M1462::PLC LINK SLAVE ID 23 acts
+M1463::PLC LINK SLAVE ID 24 acts
+M1464::PLC LINK SLAVE ID 25 acts
+M1465::PLC LINK SLAVE ID 26 acts
+M1466::PLC LINK SLAVE ID 27 acts
+M1467::PLC LINK SLAVE ID 28 acts
+M1468::PLC LINK SLAVE ID 29 acts
+M1469::PLC LINK SLAVE ID 30 acts
+M1470::PLC LINK SLAVE ID 31 acts
+M1471::PLC LINK SLAVE ID 32 acts
+M1472::PLC LINK SLAVE ID 17 ERROR
+M1473::PLC LINK SLAVE ID 18 ERROR
+M1474::PLC LINK SLAVE ID 19 ERROR
+M1475::PLC LINK SLAVE ID 20 ERROR
+M1476::PLC LINK SLAVE ID 21 ERROR
+M1477::PLC LINK SLAVE ID 22 ERROR
+M1478::PLC LINK SLAVE ID 23 ERROR
+M1479::PLC LINK SLAVE ID 24 ERROR
+M1480::PLC LINK SLAVE ID 25 ERROR
+M1481::PLC LINK SLAVE ID 26 ERROR
+M1482::PLC LINK SLAVE ID 27 ERROR
+M1483::PLC LINK SLAVE ID 28 ERROR
+M1484::PLC LINK SLAVE ID 29 ERROR
+M1485::PLC LINK SLAVE ID 30 ERROR
+M1486::PLC LINK SLAVE ID 31 ERROR
+M1487::PLC LINK SLAVE ID 32 ERROR
+M1488::PLC LINK SLAVE ID 17 read completed
+M1489::PLC LINK SLAVE ID 18 read completed
+M1490::PLC LINK SLAVE ID 19 read completed
+M1491::PLC LINK SLAVE ID 20 read completed
+M1492::PLC LINK SLAVE ID 21 read completed
+M1493::PLC LINK SLAVE ID 22 read completed
+M1494::PLC LINK SLAVE ID 23 read completed
+M1495::PLC LINK SLAVE ID 24 read completed
+M1496::PLC LINK SLAVE ID 25 read completed
+M1497::PLC LINK SLAVE ID 26 read completed
+M1498::PLC LINK SLAVE ID 27 read completed
+M1499::PLC LINK SLAVE ID 28 read completed
+M1500::PLC LINK SLAVE ID 29 read completed
+M1501::PLC LINK SLAVE ID 30 read completed
+M1502::PLC LINK SLAVE ID 31 read completed
+M1503::PLC LINK SLAVE ID 32 read completed
+M1504::PLC LINK SLAVE ID 17 write completed
+M1505::PLC LINK SLAVE ID 18 write completed
+M1506::PLC LINK SLAVE ID 19 write completed
+M1507::PLC LINK SLAVE ID 20 write completed
+M1508::PLC LINK SLAVE ID 21 write completed
+M1509::PLC LINK SLAVE ID 22 write completed
+M1510::PLC LINK SLAVE ID 23 write completed
+M1511::PLC LINK SLAVE ID 24 write completed
+M1512::PLC LINK SLAVE ID 25 write completed
+M1513::PLC LINK SLAVE ID 26 write completed
+M1514::PLC LINK SLAVE ID 27 write completed
+M1515::PLC LINK SLAVE ID 28 write completed
+M1516::PLC LINK SLAVE ID 29 write completed
+M1517::PLC LINK SLAVE ID 30 write completed
+M1518::PLC LINK SLAVE ID 31 write completed
+M1519::PLC LINK SLAVE ID 32 write completed
+D2::1.Flow meter in 1
+D3::1.Engine 1
+D4::1.Flow meter Out 1
+D5::1.Flow meter out 1
+D6::1.Engine 2
+D7::1.Flow Meter in 1
+D8::1.Storage Tank Interger
+D9::1.Service Tank Integer
+D10::1.Engine 1 Integer
+D11::1.Engine 2 Integer
+D14::2.Flow meter in 1
+D15::2.Engine 1
+D16::2.Flow meter Out 1
+D17::2.Flow meter out 1
+D18::2.Engine 2
+D19::2.Flow Meter in 1
+D20::2.Storage Tank Interger
+D21::2.Service Tank Integer
+D22::2.Engine 1 Integer
+D23::2.Engine 2 Integer
+D26::3.Flow meter in 1
+D27::3.Engine 1
+D28::3.Flow meter Out 1
+D29::3.Flow meter out 1
+D30::3.Engine 2
+D31::3.Flow Meter in 1
+D32::3.Storage Tank Interger
+D33::3.Service Tank Integer
+D34::3.Engine 1 Integer
+D35::3.Engine 2 Integer
+D38::4.Flow meter in 1
+D39::4.Engine 1
+D40::4.Flow meter Out 1
+D41::4.Flow meter out 1
+D42::4.Engine 2
+D43::4.Flow Meter in 1
+D44::4.Storage Tank Interger
+D45::4.Service Tank Integer
+D46::4.Engine 1 Integer
+D47::4.Engine 2 Integer
+D50::5.Flow meter in 1
+D51::5.Engine 1
+D52::5.Flow meter Out 1
+D53::5.Flow meter out 1
+D54::5.Engine 2
+D55::5.Flow Meter in 1
+D56::5.Storage Tank Interger
+D57::5.Service Tank Integer
+D58::5.Engine 1 Integer
+D59::5.Engine 2 Integer
+D62::6.Flow meter in 1
+D63::6.Engine 1
+D64::6.Flow meter Out 1
+D65::6.Flow meter out 1
+D66::6.Engine 2
+D67::6.Flow Meter in 1
+D68::6.Storage Tank Interger
+D69::6.Service Tank Integer
+D70::6.Engine 1 Integer
+D71::6.Engine 2 Integer
+D72::Page Recognition Register
+D1000::Watchdog timer (WDT) value (Unit: 1ms)
+D1001::DVP model number+memory capacity / type (user can read PLC program version from this register. For example, D1001 = H XX27 means version 2.7. When reading from HPP it will display Knnnnn and you can convert it to hexadecimal number by pressing <H> key.
+D1002::Program capacity
+D1003::Sum of program memory (sum of the PLC internal program memory. User can identify the content of PLC control program by this register)
+D1004::Check code for grammar
+D1005::System used
+D1008::STEP address when WDT timer is ON
+D1009::The occuring history of LV signals will be stored in D1009
+D1010::Present scan time (Unit: 0.1ms)
+D1011::Minimum scan time (Unit: 0.1ms)
+D1012::Maximum scan time (Unit: 0.1ms)
+D1015::0~32,767(unit: 0.1ms) addition type of high-speed connection timer
+D1018::Geocities PI (Low byte)
+D1019::Geocities PI(High byte)
+D1020::X0 ~ X7 input filter (Unit: ms)
+D1021::ES/EH/EH2/SV: X10 ~ X17 input filter (Unit: ms)SC: X10 ~ X17 input filter (time base: scan cycle), range: 0 ~ 1,000 (Unit: times)
+D1022::Double frequency selection for AB phase counter of ES/EX/SS and SC/SA/SX models
+D1024::System used flag
+D1025::Communication error code
+D1028::Index register E0
+D1029::Index register F0
+D1030::Output numbers of Y0 pulse (Low word)
+D1031::Output numbers of Y0 pulse (High word)
+D1032::Output numbers of Y1 pulse (Low word)
+D1033::Output numbers of Y1 pulse (High word)
+D1034::Frequency measurement card working mode
+D1035::Set the number of X input point of RUN/STOP
+D1036::COM1(RS-232) communication protocol
+D1037::HKY key repeat time (ms)
+D1038::When PLC MPU is slave, the setting of data response delay time. The setting range is 0~10,000, and the time unit is 0.1ms.
+D1039::Constant scan time (ms)
+D1040::On state number 1 of STEP point S
+D1041::On state number 2 of STEP point S
+D1042::On state number 3 of STEP point S
+D1043::On state number 4 of STEP point S
+D1044::On state number 5 of STEP point S
+D1045::On state number 6 of STEP point S
+D1046::On state number 7 of STEP point S
+D1047::On state number 8 of STEP point S
+D1049::On number of alarm point
+D1050::Modbus communication data conversion. PLC will automatically convert the ASCII data saved in D1070~D1085 to HEX. 
+D1051::Modbus communication data conversion. PLC will automatically convert the ASCII data saved in D1070~D1085 to HEX. 
+D1052::Modbus communication data conversion. PLC will automatically convert the ASCII data saved in D1070~D1085 to HEX. 
+D1053::Modbus communication data conversion. PLC will automatically convert the ASCII data saved in D1070~D1085 to HEX. 
+D1054::Modbus communication data conversion. PLC will automatically convert the ASCII data saved in D1070~D1085 to HEX. 
+D1055::Modbus communication data conversion. PLC will automatically convert the ASCII data saved in D1070~D1085 to HEX. 
+D1056::Present value of SX/EX MPU analog input channel 0 (CH0) and EH MPU AD card channel 0 (CH0)
+D1057::Present value of SX/EX MPU analog input channel 1 (CH1) and EH MPU AD card channel 1 (CH1)
+D1058::Present value of EX MPU analog input channel 2 (CH2)
+D1059::Present value of EX MPU analog input channel 3 (CH3)
+D1061::System error message
+D1062::It is used to set average time (2~4 times) for SX model AD0 and AD1.
+D1065::System used flag
+D1066::System used flag
+D1067::Algorithm error code
+D1068::Lock the algorithm error address
+D1069::Step number of errors associated with flags M1065~M1067
+D1070::When the PLC built-in RS-485 communication command receives feedback signals from receiver. The signals will be saved in the registers D1070~D1085. User can use the contents saved in the registers to check the feedback data.
+D1071::When the PLC built-in RS-485 communication command receives feedback signals from receiver. The signals will be saved in the registers D1070~D1085. User can use the contents saved in the registers to check the feedback data.
+D1072::When the PLC built-in RS-485 communication command receives feedback signals from receiver. The signals will be saved in the registers D1070~D1085. User can use the contents saved in the registers to check the feedback data.
+D1073::When the PLC built-in RS-485 communication command receives feedback signals from receiver. The signals will be saved in the registers D1070~D1085. User can use the contents saved in the registers to check the feedback data.
+D1074::When the PLC built-in RS-485 communication command receives feedback signals from receiver. The signals will be saved in the registers D1070~D1085. User can use the contents saved in the registers to check the feedback data.
+D1075::When the PLC built-in RS-485 communication command receives feedback signals from receiver. The signals will be saved in the registers D1070~D1085. User can use the contents saved in the registers to check the feedback data.
+D1076::When the PLC built-in RS-485 communication command receives feedback signals from receiver. The signals will be saved in the registers D1070~D1085. User can use the contents saved in the registers to check the feedback data.
+D1077::When the PLC built-in RS-485 communication command receives feedback signals from receiver. The signals will be saved in the registers D1070~D1085. User can use the contents saved in the registers to check the feedback data.
+D1078::When the PLC built-in RS-485 communication command receives feedback signals from receiver. The signals will be saved in the registers D1070~D1085. User can use the contents saved in the registers to check the feedback data.
+D1079::When the PLC built-in RS-485 communication command receives feedback signals from receiver. The signals will be saved in the registers D1070~D1085. User can use the contents saved in the registers to check the feedback data.
+D1080::When the PLC built-in RS-485 communication command receives feedback signals from receiver. The signals will be saved in the registers D1070~D1085. User can use the contents saved in the registers to check the feedback data.
+D1081::When the PLC built-in RS-485 communication command receives feedback signals from receiver. The signals will be saved in the registers D1070~D1085. User can use the contents saved in the registers to check the feedback data.
+D1082::When the PLC built-in RS-485 communication command receives feedback signals from receiver. The signals will be saved in the registers D1070~D1085. User can use the contents saved in the registers to check the feedback data.
+D1083::When the PLC built-in RS-485 communication command receives feedback signals from receiver. The signals will be saved in the registers D1070~D1085. User can use the contents saved in the registers to check the feedback data.
+D1084::When the PLC built-in RS-485 communication command receives feedback signals from receiver. The signals will be saved in the registers D1070~D1085. User can use the contents saved in the registers to check the feedback data.
+D1085::When the PLC built-in RS-485 communication command receives feedback signals from receiver. The signals will be saved in the registers D1070~D1085. User can use the contents saved in the registers to check the feedback data.
+D1086::Low word of password setting for DVP-PCC01 (decided by the HEX value that is corresponded to ASCII character)
+D1087::Low word of password setting for DVP-PCC01 (decided by the HEX value that is corresponded to ASCII character)
+D1089::When the PLC built-in RS-485 communication command is executed, the transmitting signals will be stored in the registers D1089~D1099. User can use the contents saved in registers to check the feedback data.
+D1090::When the PLC built-in RS-485 communication command is executed, the transmitting signals will be stored in the registers D1089~D1099. User can use the contents saved in registers to check the feedback data.
+D1091::When the PLC built-in RS-485 communication command is executed, the transmitting signals will be stored in the registers D1089~D1099. User can use the contents saved in registers to check the feedback data.
+D1092::When the PLC built-in RS-485 communication command is executed, the transmitting signals will be stored in the registers D1089~D1099. User can use the contents saved in registers to check the feedback data.
+D1093::When the PLC built-in RS-485 communication command is executed, the transmitting signals will be stored in the registers D1089~D1099. User can use the contents saved in registers to check the feedback data.
+D1094::When the PLC built-in RS-485 communication command is executed, the transmitting signals will be stored in the registers D1089~D1099. User can use the contents saved in registers to check the feedback data.
+D1095::When the PLC built-in RS-485 communication command is executed, the transmitting signals will be stored in the registers D1089~D1099. User can use the contents saved in registers to check the feedback data.
+D1096::When the PLC built-in RS-485 communication command is executed, the transmitting signals will be stored in the registers D1089~D1099. User can use the contents saved in registers to check the feedback data.
+D1097::When the PLC built-in RS-485 communication command is executed, the transmitting signals will be stored in the registers D1089~D1099. User can use the contents saved in registers to check the feedback data.
+D1098::When the PLC built-in RS-485 communication command is executed, the transmitting signals will be stored in the registers D1089~D1099. User can use the contents saved in registers to check the feedback data.
+D1099::When the PLC built-in RS-485 communication command is executed, the transmitting signals will be stored in the registers D1089~D1099. User can use the contents saved in registers to check the feedback data.
+D1100::Once LV signal happen, Y0~Y17 will perform output based on corresponding value of D1100.
+D1101::Start address of file register
+D1102::Copy numbers of file register
+D1103::Set start D number for file register to store (the number should be large than 2000)
+D1104::Parameter index for Accel/Decel pulse output Y0 (corresponds to device D)
+D1109::COM3 communication protocol setting
+D1110::Average of SX/EX series analog input channel 0 (CH 0) and EH series DA card channel 0 (CH0)
+D1111::Average of SX/EX series analog input channel 1 (CH 1) and EH series DA card channel 1 (CH1)
+D1112::Average of EX series analog input channel 2 (CH 2)
+D1113::Average of EX series analog input channel 3 (CH 3)
+D1116::SX/EX series analog output channel 0 (CH 0) and EH series DA card channel 0 (CH0)
+D1117::SX/EX series analog output channel 1 (CH 1) and EH series DA card channel 0 (CH0)
+D1118::For SX/EX/EH model only. It is the filter wave time setting between the A/D conversions, and with the default setting as 0 and the unit as 1ms, all will be regarded as 5ms if D1118<=5. 
+D1119::System used
+D1120::COM2(RS-485) Communication protocol
+D1121::PLC communication address (the address that save PLC communication address, it is latched)
+D1122::Residual words of transmitting data
+D1123::Residual words of receiving data
+D1124::Start character definition (STX)
+D1125::First ending character definition (EXT1)
+D1126::Second ending character definition (EXT2)
+D1127::It is the interrupt request of communication receiving of RS special words. (I150)
+D1129::RS-485 time-out setting (ms)
+D1130::MODBUS return error code record 
+D1133::Special high-speed pulse output register (D) index
+D1137::Address of operator error occurs
+D1139::Connection number of BCD module expansion unit (the maximum is two units)
+D1140::Special expansion module number, maximum is 8 units
+D1141::System used
+D1142::Input points (X) of expansion unit
+D1143::Output points (Y) of expansion unit
+D1144::Parameter index for Accel/Decel pulse output of adjustable slope (corresponds to component D)
+D1145::Number of left-side high-speed special extension modules; maximum 8 modules extendable (only supports (for SV)
+D1146::Connection number of DISP module expansion unit
+D1147::Memory card type (Memory state)  b0=0:NO CARD (H0000)  b0=1:FLASH CARD exists  b8=0:The switch of FLASH CARD is Off (H0001)  b8=1:The switch of FLASH CARD is On (H0101)
+D1148::System used
+D1149::Function card type: 0:NO CARD  1:RS-232(DVP-F232),DU01(DVPDU01)  2:RS-422(DVP-F422)  3:COM3(DVP-F232S,DVP-F485S)  4:Potentiometer switch(DVP-F6VR)  5:DIP switch(DVP-F8ID)  6:Transitor output card(DVP-F2OT)  7:Digital input(DVP-F4IP)  8:2AD card (DVP-F2AD)  9:2DA card(DVP-F2DA)
+D1150::Table count register in multi-group setting comparison mode
+D1151::Table count register in frequency control mode
+D1152::The change value of high word of DHSZ D
+D1153::The change value of low word of DHSZ D
+D1154::Recommended Interval of accelerated time (10~32767 ms) of Accel/Decel pulse output of adjustable slope
+D1155::Recommended Interval of decelerated time (-1~ -32700 ms) of Accel/Decel pulse output of adjustable slope
+D1156::Special D that indicated by RTMU command (K0~K9)
+D1157::Special D that indicated by RTMU command (K0~K9)
+D1158::Special D that indicated by RTMU command (K0~K9)
+D1159::Special D that indicated by RTMU command (K0~K9)
+D1160::Special D that indicated by RTMU command (K0~K9)
+D1161::Special D that indicated by RTMU command (K0~K9)
+D1162::Special D that indicated by RTMU command (K0~K9)
+D1163::Special D that indicated by RTMU command (K0~K9)
+D1164::Special D that indicated by RTMU command (K0~K9)
+D1165::Special D that indicated by RTMU command (K0~K9)
+D1166::Rising-edge or falling-edge switch of X10 (SCV1.4 or over models)
+D1167::Rising-edge or falling-edge switch of X11 (SCV1.4 or over models)
+D1168::RS instruction, interrupt request when receiving specified data character (I150)
+D1169::RS instruction, interrupt request when receiving specified data legnth (I160)
+D1170::PC value when executing single step
+D1172::2-phase pulse output frequency (12Hz~20KHz)
+D1173::2-phase pulse output mode selection (K1and K2)
+D1174::Target number for 2-phase pulse outputs (low 16-bit)
+D1175::Target number for 2-phase pulse outputs (high 16-bit)
+D1176::Present output number of 2-phase pulse (low 16-bit)
+D1177::Present output number of 2-phase pulse (high 16-bit)
+D1178::VR0 value
+D1179::VR1 value
+D1180::16-byte (low) of high-speed counting value will be stored in D1180 when I401 happens
+D1181::16-byte (high) of high-speed counting value will be stored in D1181 when I401 happens
+D1182::Pointer register E1
+D1183::Pointer register F1
+D1184::Pointer register E2
+D1185::Pointer register F2
+D1186::Pointer register E3
+D1187::Pointer register F3
+D1188::Pointer register E4
+D1189::Pointer register F4
+D1190::Pointer register E5
+D1191::Pointer register F5
+D1192::Pointer register E6
+D1193::Pointer register F6
+D1194::Pointer register E7
+D1195::Pointer register F7
+D1196::Number system stting (provided for DVP-SX series only)
+D1197::System used
+D1198::16-byte (low) of high-speed counting value will be stored in D1198 when I501 happens
+D1199::16-byte (high) of high-speed counting value will be stored in D1199 when I501 happens
+D1200::Start address of M0~M999 auxiliary relay latched
+D1201::End address of M0~M999 auxiliary relay latched
+D1202::Start address of M2000~M4095 auxiliary relay latched
+D1203::End address of M2000~M4095 auxiliary relay latched
+D1204::Start latched address of 100ms timer T0~T199
+D1205::End latched address of 100ms timer T0~T199
+D1206::Start latched address of 10ms timer T200~T239
+D1207::End latched address of 10ms timer T200~T239
+D1208::Start latched address of 16-bit counter C0~C199
+D1209::End latched address of 16-bit counter C0~C199
+D1210::Start latched address of 32-bit counter C200~C234
+D1211::End latched address of 32-bit counter C200~C234
+D1212::Start latched address of 32-bit high-speed counter C235~C255 
+D1213::End latched address of 32-bit high-speed counter C235~C255
+D1214::Start latched address of step point (S0~S1023) 
+D1215::End latched address of step point (S0~S1023) 
+D1216::Start latched address of register D0~D999
+D1217::End latched address of register D0~D999
+D1218::Start latched address of register D2000~D9999
+D1219::End latched address of register D2000~D9999
+D1220::The first group of pulse output phase 00: 1-phase (Y0 output) 01:A Phase  02:B Phase
+D1221::The second group of pulse output phase 00:1- phase (Y2 output)  01:A Phase  02:B Phase
+D1222::Set the time difference of CH0 between direction signal and pulse output for DRVI, DDRVI, DRVA, DDRVA, PLSV, and DPLSV.
+D1223::Set the time difference of CH1 between direction signal and pulse output for DRVI, DDRVI, DRVA, DDRVA, PLSV, and DPLSV.
+D1225::The first group of the count setting of counter (HHSC0). It is the count mode of C241, C246, C251.
+D1226::The second group of the count setting of counter (HHSC1). It is the count mode of C242, C247, C252.
+D1227::The third group of the count setting of counter (HHSC2). It is the count mode of C243, C248, C253.
+D1228::The forth group of the count setting of counter (HHSC3). It is the count mode of C244, C249, C254.
+D1256::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1257::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1258::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1259::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1260::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1261::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1262::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1263::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1264::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1265::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1266::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1267::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1268::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1269::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1270::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1271::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1272::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1273::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1274::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1275::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1276::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1277::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1278::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1279::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1280::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1281::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1282::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1283::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1284::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1285::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1286::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1287::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1288::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1289::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1290::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1291::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1292::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1293::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1294::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1295::MODRW command of RS-485 is built-in. The characters that sent during executing is saved in D1256~D1295. User can check according to the content of these registers.
+D1296::MODRW command of RS-485 is built-in. PLC system will convert ASCII in the content of the register that user indicates to HEX and save it in D1296 ?D1311.
+D1297::MODRW command of RS-485 is built-in. PLC system will convert ASCII in the content of the register that user indicates to HEX and save it in D1296 ?D1311.
+D1298::MODRW command of RS-485 is built-in. PLC system will convert ASCII in the content of the register that user indicates to HEX and save it in D1296 ?D1311.
+D1299::MODRW command of RS-485 is built-in. PLC system will convert ASCII in the content of the register that user indicates to HEX and save it in D1296 ?D1311.
+D1300::MODRW command of RS-485 is built-in. PLC system will convert ASCII in the content of the register that user indicates to HEX and save it in D1296 ?D1311.
+D1301::MODRW command of RS-485 is built-in. PLC system will convert ASCII in the content of the register that user indicates to HEX and save it in D1296 ?D1311.
+D1302::MODRW command of RS-485 is built-in. PLC system will convert ASCII in the content of the register that user indicates to HEX and save it in D1296 ?D1311.
+D1303::MODRW command of RS-485 is built-in. PLC system will convert ASCII in the content of the register that user indicates to HEX and save it in D1296 ?D1311.
+D1304::MODRW command of RS-485 is built-in. PLC system will convert ASCII in the content of the register that user indicates to HEX and save it in D1296 ?D1311.
+D1305::MODRW command of RS-485 is built-in. PLC system will convert ASCII in the content of the register that user indicates to HEX and save it in D1296 ?D1311.
+D1306::MODRW command of RS-485 is built-in. PLC system will convert ASCII in the content of the register that user indicates to HEX and save it in D1296 ?D1311.
+D1307::MODRW command of RS-485 is built-in. PLC system will convert ASCII in the content of the register that user indicates to HEX and save it in D1296 ?D1311.
+D1308::MODRW command of RS-485 is built-in. PLC system will convert ASCII in the content of the register that user indicates to HEX and save it in D1296 ?D1311.
+D1309::MODRW command of RS-485 is built-in. PLC system will convert ASCII in the content of the register that user indicates to HEX and save it in D1296 ?D1311.
+D1310::MODRW command of RS-485 is built-in. PLC system will convert ASCII in the content of the register that user indicates to HEX and save it in D1296 ?D1311.
+D1311::MODRW command of RS-485 is built-in. PLC system will convert ASCII in the content of the register that user indicates to HEX and save it in D1296 ?D1311.
+D1313::Real time clock (RTC) second 00~59
+D1314::Real time clock (RTC) minute 00~59
+D1315::Real time clock (RTC) hour 00~23
+D1316::Real time clock (RTC) day 01~31
+D1317::Real time clock (RTC) month 01~12
+D1318::Real time clock (RTC) week 1~7
+D1319::Real time clock (RTC) year 00-99
+D1320::The 1st special expansion module ID
+D1321::The 2nd special expansion module ID
+D1322::The 3rd special expansion module ID
+D1323::The 4th special expansion module ID
+D1324::The 5th special expansion module ID
+D1325::The 6th special expansion module ID
+D1326::The 7th special expansion module ID
+D1327::The 8th special expansion module ID
+D1328::CH0 (Y0,Y1) offset pulse number (Low word)
+D1329::CH0 (Y0,Y1) offset pulse number (High word)
+D1330::CH1 (Y2,Y3) offset pulse number (Low word)
+D1331::CH1 (Y2,Y3) offset pulse number (High word)
+D1332::CH0 (Y0,Y1) residual pulse number (Low word)
+D1333::CH0 (Y0,Y1) residual pulse number (High word)
+D1334::CH1 (Y2,Y3) residual pulse number (Low word)
+D1335::CH1 (Y2,Y3) residual pulse number (High word)
+D1336::Present value of CH0 pulse (Low word) Y0, Y1
+D1337::Present value of CH0 pulse (High word) Y0, Y1
+D1338::Present value of CH1 pulse (Low word) Y2, Y3
+D1339::Present value of CH1 pulse (High word) Y2, Y3
+D1340::The 1st step start frequency and the last step end frequency of CH0 pulse
+D1341::Maximum output frequency (Low word) (it is fixed to 200KHz)
+D1342::Maximum output frequency (High word) (it is fixed to 200KHz)
+D1343::Acceleration /Deceleration time of CH0 pulse
+D1344::CH0 (Y0,Y1) complement pulse number (Low word)
+D1345::CH0 (Y0,Y1) complement pulse number (High word)
+D1346::CH1 (Y2,Y3) complement pulse number (Low word)
+D1347::CH1 (Y2,Y3) complement pulse number (High word)
+D1348::CH0 (Y10) current pulse value (Low word)
+D1349::CH0 (Y10) current pulse value (High word)
+D1350::CH1 (Y11) current pulse value (Low word)
+D1351::CH1 (Y11) current pulse value (High word)
+D1352::SC: the 1st step starting frequency and last step ending frequency of Y11.EH: the 2nd  step starting frequency and last step ending frequency of CH1 (Y2, Y3) output
+D1353::SC: Y11 acceleration/deceleration time setting.EH: acceleration/deceleration time setting of 2nd group CH1 (Y2, Y3) output.
+D1355::Starting reference for Master to read from Salve ID#1
+D1356::Starting reference for Master to read from Salve ID#2
+D1357::Starting reference for Master to read from Salve ID#3
+D1358::Starting reference for Master to read from Salve ID#4
+D1359::Starting reference for Master to read from Salve ID#5
+D1360::Starting reference for Master to read from Salve ID#6
+D1361::Starting reference for Master to read from Salve ID#7
+D1362::Starting reference for Master to read from Salve ID#8
+D1363::Starting reference for Master to read from Salve ID#9
+D1364::Starting reference for Master to read from Salve ID#10
+D1365::Starting reference for Master to read from Salve ID#11
+D1366::Starting reference for Master to read from Salve ID#12
+D1367::Starting reference for Master to read from Salve ID#13
+D1368::Starting reference for Master to read from Salve ID#14
+D1369::Starting reference for Master to read from Salve ID#15
+D1370::Starting reference for Master to read from Salve ID#16
+D1371::When M1070 is ON, D1371 will decide the time unit of CH0 PWM pulse output
+D1372::When M1071 is ON, D1372 will decide the time unit of CH1 PWM pulse output
+D1386::No. of the 1st left-side high-speed special extension module ID(for SV)
+D1387::No. of the 2nd left-side high-speed special extension module ID(for SV)
+D1388::No. of the 3rd left-side high-speed special extension module ID(for SV)
+D1389::No. of the 4th left-side high-speed special extension module ID(for SV)
+D1390::No. of the 5th left-side high-speed special extension module ID(for SV)
+D1391::No. of the 6th left-side high-speed special extension module ID(for SV)
+D1392::No. of the 7th left-side high-speed special extension module ID(for SV)
+D1393::No. of the 8th left-side high-speed special extension module ID(for SV)
+D1399::Assigning ID number of the starting slave on PLC Link network
+D1415::Starting reference for Master to write in Salve ID#1
+D1416::Starting reference for Master to write in Salve ID#2
+D1417::Starting reference for Master to write in Salve ID#3
+D1418::Starting reference for Master to write in Salve ID#4
+D1419::Starting reference for Master to write in Salve ID#5
+D1420::Starting reference for Master to write in Salve ID#6
+D1421::Starting reference for Master to write in Salve ID#7
+D1422::Starting reference for Master to write in Salve ID#8
+D1423::Starting reference for Master to write in Salve ID#9
+D1424::Starting reference for Master to write in Salve ID#10
+D1425::Starting reference for Master to write in Salve ID#11
+D1426::Starting reference for Master to write in Salve ID#12
+D1427::Starting reference for Master to write in Salve ID#13
+D1428::Starting reference for Master to write in Salve ID#14
+D1429::Starting reference for Master to write in Salve ID#15
+D1430::Starting reference for Master to write in Salve ID#16
+D1431::Setting of times of PLC Link polling cycle
+D1432::The current times of PLC Link polling cycle
+D1433::Number of salve units linked on PLC Link network
+D1434::Data length to be read on Salve ID#1
+D1435::Data length to be read on Salve ID#2
+D1436::Data length to be read on Salve ID#3
+D1437::Data length to be read on Salve ID#4
+D1438::Data length to be read on Salve ID#5
+D1439::Data length to be read on Salve ID#6
+D1440::Data length to be read on Salve ID#7
+D1441::Data length to be read on Salve ID#8
+D1442::Data length to be read on Salve ID#9
+D1443::Data length to be read on Salve ID#10
+D1444::Data length to be read on Salve ID#11
+D1445::Data length to be read on Salve ID#12
+D1446::Data length to be read on Salve ID#13
+D1447::Data length to be read on Salve ID#14
+D1448::Data length to be read on Salve ID#15
+D1449::Data length to be read on Salve ID#16
+D1450::Data length to be written on Slave ID#1
+D1451::Data length to be written on Slave ID#2
+D1452::Data length to be written on Slave ID#3
+D1453::Data length to be written on Slave ID#4
+D1454::Data length to be written on Slave ID#5
+D1455::Data length to be written on Slave ID#6
+D1456::Data length to be written on Slave ID#7
+D1457::Data length to be written on Slave ID#8
+D1458::Data length to be written on Slave ID#9
+D1459::Data length to be written on Slave ID#10
+D1460::Data length to be written on Slave ID#11
+D1461::Data length to be written on Slave ID#12
+D1462::Data length to be written on Slave ID#13
+D1463::Data length to be written on Slave ID#14
+D1464::Data length to be written on Slave ID#15
+D1465::Data length to be written on Slave ID#16
+D1466::CH0 the necessary pulse number for one turn of motor (low word)
+D1467::CH0 the necessary pulse number for one turn of motor (high word)
+D1468::CH1 the necessary pulse number for one turn of motor (low word)
+D1469::CH1 the necessary pulse number for one turn of motor (high word)
+D1470::CH0 the moved distance for one turn of motor (low word)
+D1471::CH0 the moved distance for one turn of motor (high word)
+D1472::CH1 the moved distance for one turn of motor (low word)
+D1473::CH1 the moved distance for one turn of motor (high word)
+D1474::CH0 mechanical unit of movement (low word)
+D1475::CH0 mechanical unit of movement (high word)
+D1476::CH1 mechanical unit of movement (low word)
+D1477::CH1 mechanical unit of movement (high word)
+D1480::Data buffer to store the data read from Slave ID#1 when M1353=Off;M1353=On (Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data read from ID#1~16 by EH Master.
+D1481::Data buffer to store the data read from Slave ID#1 when M1353=Off;M1353=On (Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data read from ID#1~16 by EH Master.
+D1482::Data buffer to store the data read from Slave ID#1 when M1353=Off;M1353=On (Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data read from ID#1~16 by EH Master.
+D1483::Data buffer to store the data read from Slave ID#1 when M1353=Off;M1353=On (Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data read from ID#1~16 by EH Master.
+D1484::Data buffer to store the data read from Slave ID#1 when M1353=Off;M1353=On (Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data read from ID#1~16 by EH Master.
+D1485::Data buffer to store the data read from Slave ID#1 when M1353=Off;M1353=On (Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data read from ID#1~16 by EH Master.
+D1486::Data buffer to store the data read from Slave ID#1 when M1353=Off;M1353=On (Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data read from ID#1~16 by EH Master.
+D1487::Data buffer to store the data read from Slave ID#1 when M1353=Off;M1353=On (Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data read from ID#1~16 by EH Master.
+D1488::Data buffer to store the data read from Slave ID#1 when M1353=Off;M1353=On (Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data read from ID#1~16 by EH Master.
+D1489::Data buffer to store the data read from Slave ID#1 when M1353=Off;M1353=On (Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data read from ID#1~16 by EH Master.
+D1490::Data buffer to store the data read from Slave ID#1 when M1353=Off;M1353=On (Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data read from ID#1~16 by EH Master.
+D1491::Data buffer to store the data read from Slave ID#1 when M1353=Off;M1353=On (Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data read from ID#1~16 by EH Master.
+D1492::Data buffer to store the data read from Slave ID#1 when M1353=Off;M1353=On (Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data read from ID#1~16 by EH Master.
+D1493::Data buffer to store the data read from Slave ID#1 when M1353=Off;M1353=On (Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data read from ID#1~16 by EH Master.
+D1494::Data buffer to store the data read from Slave ID#1 when M1353=Off;M1353=On (Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data read from ID#1~16 by EH Master.
+D1495::Data buffer to store the data read from Slave ID#1 when M1353=Off;M1353=On (Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data read from ID#1~16 by EH Master.
+D1496::Data buffer to store the data to be written on Slave ID#1 when M1353=Off.M1353=On(Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#1~16 by EH Master.
+D1497::Data buffer to store the data to be written on Slave ID#1 when M1353=Off.M1353=On(Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#1~16 by EH Master.
+D1498::Data buffer to store the data to be written on Slave ID#1 when M1353=Off.M1353=On(Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#1~16 by EH Master.
+D1499::Data buffer to store the data to be written on Slave ID#1 when M1353=Off.M1353=On(Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#1~16 by EH Master.
+D1500::Data buffer to store the data to be written on Slave ID#1 when M1353=Off.M1353=On(Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#1~16 by EH Master.
+D1501::Data buffer to store the data to be written on Slave ID#1 when M1353=Off.M1353=On(Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#1~16 by EH Master.
+D1502::Data buffer to store the data to be written on Slave ID#1 when M1353=Off.M1353=On(Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#1~16 by EH Master.
+D1503::Data buffer to store the data to be written on Slave ID#1 when M1353=Off.M1353=On(Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#1~16 by EH Master.
+D1504::Data buffer to store the data to be written on Slave ID#1 when M1353=Off.M1353=On(Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#1~16 by EH Master.
+D1505::Data buffer to store the data to be written on Slave ID#1 when M1353=Off.M1353=On(Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#1~16 by EH Master.
+D1506::Data buffer to store the data to be written on Slave ID#1 when M1353=Off.M1353=On(Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#1~16 by EH Master.
+D1507::Data buffer to store the data to be written on Slave ID#1 when M1353=Off.M1353=On(Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#1~16 by EH Master.
+D1508::Data buffer to store the data to be written on Slave ID#1 when M1353=Off.M1353=On(Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#1~16 by EH Master.
+D1509::Data buffer to store the data to be written on Slave ID#1 when M1353=Off.M1353=On(Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#1~16 by EH Master.
+D1510::Data buffer to store the data to be written on Slave ID#1 when M1353=Off.M1353=On(Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#1~16 by EH Master.
+D1511::Data buffer to store the data to be written on Slave ID#1 when M1353=Off.M1353=On(Only available for EH)(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#1~16 by EH Master.
+D1512::When M1353=Off, SLAVE ID# 2 PLC LINK reads. Communication address for SLAVE ID# 2 reads is in D1356. The range is D100-D115 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address read from SLAVE ID#17~32 will be saved in D1512~1527.
+D1513::When M1353=Off, SLAVE ID# 2 PLC LINK reads. Communication address for SLAVE ID# 2 reads is in D1356. The range is D100-D115 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address read from SLAVE ID17~32 will be saved in D1512~1527.
+D1514::When M1353=Off, SLAVE ID# 2 PLC LINK reads. Communication address for SLAVE ID# 2 reads is in D1356. The range is D100-D115 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address read from SLAVE ID17~32 will be saved in D1512~1527.
+D1515::When M1353=Off, SLAVE ID# 2 PLC LINK reads. Communication address for SLAVE ID# 2 reads is in D1356. The range is D100-D115 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address read from SLAVE ID17~32 will be saved in D1512~1527.
+D1516::When M1353=Off, SLAVE ID# 2 PLC LINK reads. Communication address for SLAVE ID# 2 reads is in D1356. The range is D100-D115 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address read from SLAVE ID17~32 will be saved in D1512~1527.
+D1517::When M1353=Off, SLAVE ID# 2 PLC LINK reads. Communication address for SLAVE ID# 2 reads is in D1356. The range is D100-D115 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address read from SLAVE ID17~32 will be saved in D1512~1527.
+D1518::When M1353=Off, SLAVE ID# 2 PLC LINK reads. Communication address for SLAVE ID# 2 reads is in D1356. The range is D100-D115 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address read from SLAVE ID17~32 will be saved in D1512~1527.
+D1519::When M1353=Off, SLAVE ID# 2 PLC LINK reads. Communication address for SLAVE ID# 2 reads is in D1356. The range is D100-D115 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address read from SLAVE ID17~32 will be saved in D1512~1527.
+D1520::When M1353=Off, SLAVE ID# 2 PLC LINK reads. Communication address for SLAVE ID# 2 reads is in D1356. The range is D100-D115 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address read from SLAVE ID17~32 will be saved in D1512~1527.
+D1521::When M1353=Off, SLAVE ID# 2 PLC LINK reads. Communication address for SLAVE ID# 2 reads is in D1356. The range is D100-D115 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address read from SLAVE ID17~32 will be saved in D1512~1527.
+D1522::When M1353=Off, SLAVE ID# 2 PLC LINK reads. Communication address for SLAVE ID# 2 reads is in D1356. The range is D100-D115 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address read from SLAVE ID17~32 will be saved in D1512~1527.
+D1523::When M1353=Off, SLAVE ID# 2 PLC LINK reads. Communication address for SLAVE ID# 2 reads is in D1356. The range is D100-D115 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address read from SLAVE ID17~32 will be saved in D1512~1527.
+D1524::When M1353=Off, SLAVE ID# 2 PLC LINK reads. Communication address for SLAVE ID# 2 reads is in D1356. The range is D100-D115 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address read from SLAVE ID17~32 will be saved in D1512~1527.
+D1525::When M1353=Off, SLAVE ID# 2 PLC LINK reads. Communication address for SLAVE ID# 2 reads is in D1356. The range is D100-D115 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address read from SLAVE ID17~32 will be saved in D1512~1527.
+D1526::When M1353=Off, SLAVE ID# 2 PLC LINK reads. Communication address for SLAVE ID# 2 reads is in D1356. The range is D100-D115 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address read from SLAVE ID17~32 will be saved in D1512~1527.
+D1527::When M1353=Off, SLAVE ID# 2 PLC LINK reads. Communication address for SLAVE ID# 2 reads is in D1356. The range is D100-D115 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address read from SLAVE ID17~32 will be saved in D1512~1527.
+D1528::When M1353=Off, SLAVE ID# 2 PLC LINK writes. Communication address for SLAVE ID# 2 writes is in D1416. The range is D200-D215 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address saved in D1528~1543 will be written into SLAVE ID#17~32.
+D1529::When M1353=Off, SLAVE ID# 2 PLC LINK writes. Communication address for SLAVE ID# 2 writes is in D1416. The range is D200-D215 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address saved in D1528~1543 will be written into SLAVE ID17~32.
+D1530::When M1353=Off, SLAVE ID# 2 PLC LINK writes. Communication address for SLAVE ID# 2 writes is in D1416. The range is D200-D215 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address saved in D1528~1543 will be written into SLAVE ID17~32.
+D1531::When M1353=Off, SLAVE ID# 2 PLC LINK writes. Communication address for SLAVE ID# 2 writes is in D1416. The range is D200-D215 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address saved in D1528~1543 will be written into SLAVE ID17~32.
+D1532::When M1353=Off, SLAVE ID# 2 PLC LINK writes. Communication address for SLAVE ID# 2 writes is in D1416. The range is D200-D215 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address saved in D1528~1543 will be written into SLAVE ID17~32.
+D1533::When M1353=Off, SLAVE ID# 2 PLC LINK writes. Communication address for SLAVE ID# 2 writes is in D1416. The range is D200-D215 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address saved in D1528~1543 will be written into SLAVE ID17~32.
+D1534::When M1353=Off, SLAVE ID# 2 PLC LINK writes. Communication address for SLAVE ID# 2 writes is in D1416. The range is D200-D215 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address saved in D1528~1543 will be written into SLAVE ID17~32.
+D1535::When M1353=Off, SLAVE ID# 2 PLC LINK writes. Communication address for SLAVE ID# 2 writes is in D1416. The range is D200-D215 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address saved in D1528~1543 will be written into SLAVE ID17~32.
+D1536::When M1353=Off, SLAVE ID# 2 PLC LINK writes. Communication address for SLAVE ID# 2 writes is in D1416. The range is D200-D215 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address saved in D1528~1543 will be written into SLAVE ID17~32.
+D1537::When M1353=Off, SLAVE ID# 2 PLC LINK writes. Communication address for SLAVE ID# 2 writes is in D1416. The range is D200-D215 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address saved in D1528~1543 will be written into SLAVE ID17~32.
+D1538::When M1353=Off, SLAVE ID# 2 PLC LINK writes. Communication address for SLAVE ID# 2 writes is in D1416. The range is D200-D215 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address saved in D1528~1543 will be written into SLAVE ID17~32.
+D1539::When M1353=Off, SLAVE ID# 2 PLC LINK writes. Communication address for SLAVE ID# 2 writes is in D1416. The range is D200-D215 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address saved in D1528~1543 will be written into SLAVE ID17~32.
+D1540::When M1353=Off, SLAVE ID# 2 PLC LINK writes. Communication address for SLAVE ID# 2 writes is in D1416. The range is D200-D215 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address saved in D1528~1543 will be written into SLAVE ID17~32.
+D1541::When M1353=Off, SLAVE ID# 2 PLC LINK writes. Communication address for SLAVE ID# 2 writes is in D1416. The range is D200-D215 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address saved in D1528~1543 will be written into SLAVE ID17~32.
+D1542::When M1353=Off, SLAVE ID# 2 PLC LINK writes. Communication address for SLAVE ID# 2 writes is in D1416. The range is D200-D215 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address saved in D1528~1543 will be written into SLAVE ID17~32.
+D1543::When M1353=Off, SLAVE ID# 2 PLC LINK writes. Communication address for SLAVE ID# 2 writes is in D1416. The range is D200-D215 of SLAVE ID# 2 PLC.For EH series MPU only, when M1353=On, communication address saved in D1528~1543 will be written into SLAVE ID17~32.
+D1544::When M1353=Off, SLAVE ID# 3 PLC LINK reads. Communication address for SLAVE ID# 3 reads is in D1357. The range is D100-D115 of SLAVE ID# 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to read from SLAVE ID#17~32 is saved in D1544~1559.
+D1545::When M1353=Off, SLAVE ID# 3 PLC LINK reads. Communication address for SLAVE ID# 3 reads is in D1357. The range is D100-D115 of SLAVE ID# 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to read from SLAVE ID17~32 is saved in D1544~1559.
+D1546::When M1353=Off, SLAVE ID# 3 PLC LINK reads. Communication address for SLAVE ID# 3 reads is in D1357. The range is D100-D115 of SLAVE ID# 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to read from SLAVE ID17~32 is saved in D1544~1559.
+D1547::When M1353=Off, SLAVE ID# 3 PLC LINK reads. Communication address for SLAVE ID# 3 reads is in D1357. The range is D100-D115 of SLAVE ID# 3  PLC.For EH series MPU only, when M1353=On, the data length for PLC to read from SLAVE ID17~32 is saved in D1544~1559.
+D1548::When M1353=Off, SLAVE ID# 3 PLC LINK reads. Communication address for SLAVE ID# 3 reads is in D1357. The range is D100-D115 of SLAVE ID# 3  PLC.For EH series MPU only, when M1353=On, the data length for PLC to read from SLAVE ID17~32 is saved in D1544~1559.
+D1549::When M1353=Off, SLAVE ID# 3 PLC LINK reads. Communication address for SLAVE ID# 3 reads is in D1357. The range is D100-D115 of SLAVE ID# 3  PLC.For EH series MPU only, when M1353=On, the data length for PLC to read from SLAVE ID17~32 is saved in D1544~1559.
+D1550::When M1353=Off, SLAVE ID# 3 PLC LINK reads. Communication address for SLAVE ID# 3 reads is in D1357. The range is D100-D115 of SLAVE ID# 3  PLC.For EH series MPU only, when M1353=On, the data length for PLC to read from SLAVE ID17~32 is saved in D1544~1559.
+D1551::When M1353=Off, SLAVE ID# 3 PLC LINK reads. Communication address for SLAVE ID# 3 reads is in D1357. The range is D100-D115 of SLAVE ID# 3  PLC.For EH series MPU only, when M1353=On, the data length for PLC to read from SLAVE ID17~32 is saved in D1544~1559.
+D1552::When M1353=Off, SLAVE ID# 3 PLC LINK reads. Communication address for SLAVE ID# 3 reads is in D1357. The range is D100-D115 of SLAVE ID# 3  PLC.For EH series MPU only, when M1353=On, the data length for PLC to read from SLAVE ID17~32 is saved in D1544~1559.
+D1553::When M1353=Off, SLAVE ID# 3 PLC LINK reads. Communication address for SLAVE ID# 3 reads is in D1357. The range is D100-D115 of SLAVE ID# 3  PLC.For EH series MPU only, when M1353=On, the data length for PLC to read from SLAVE ID17~32 is saved in D1544~1559.
+D1554::When M1353=Off, SLAVE ID# 3 PLC LINK reads. Communication address for SLAVE ID# 3 reads is in D1357. The range is D100-D115 of SLAVE ID# 3  PLC.For EH series MPU only, when M1353=On, the data length for PLC to read from SLAVE ID17~32 is saved in D1544~1559.
+D1555::When M1353=Off, SLAVE ID# 3 PLC LINK reads. Communication address for SLAVE ID# 3 reads is in D1357. The range is D100-D115 of SLAVE ID# 3  PLC.For EH series MPU only, when M1353=On, the data length for PLC to read from SLAVE ID17~32 is saved in D1544~1559.
+D1556::When M1353=Off, SLAVE ID# 3 PLC LINK reads. Communication address for SLAVE ID# 3 reads is in D1357. The range is D100-D115 of SLAVE ID# 3  PLC.For EH series MPU only, when M1353=On, the data length for PLC to read from SLAVE ID17~32 is saved in D1544~1559.
+D1557::When M1353=Off, SLAVE ID# 3 PLC LINK reads. Communication address for SLAVE ID# 3 reads is in D1357. The range is D100-D115 of SLAVE ID# 3  PLC.For EH series MPU only, when M1353=On, the data length for PLC to read from SLAVE ID17~32 is saved in D1544~1559.
+D1558::When M1353=Off, SLAVE ID# 3 PLC LINK reads. Communication address for SLAVE ID# 3 reads is in D1357. The range is D100-D115 of SLAVE ID# 3  PLC.For EH series MPU only, when M1353=On, the data length for PLC to read from SLAVE ID17~32 is saved in D1544~1559.
+D1559::When M1353=Off, SLAVE ID# 3 PLC LINK reads. Communication address for SLAVE ID# 3 reads is in D1357. The range is D100-D115 of SLAVE ID# 3  PLC.For EH series MPU only, when M1353=On, the data length for PLC to read from SLAVE ID17~32 is saved in D1544~1559.
+D1560::When M1353=Off, SLAVE ID# 3 PLC LINK writes. Communication address for SLAVE ID# 3 writes is in D1417. The range is D200-D215 of SLAVE ID# 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to write into SLAVE ID# 17~32 is saved in D1560~1575.
+D1561::When M1353=Off, SLAVE ID# 3 PLC LINK writes. Communication address for SLAVE ID# 3 writes is in D1417. The range is D200-D215 of SLAVE ID# 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to write into SLAVE ID 17~32 is saved in D1560~1575.
+D1562::When M1353=Off, SLAVE ID# 3 PLC LINK writes. Communication address for SLAVE ID# 3 writes is in D1417. The range is D200-D215 of SLAVE ID# 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to write into SLAVE ID 17~32 is saved in D1560~1575.
+D1563::When M1353=Off, SLAVE ID# 3 PLC LINK writes. Communication address for SLAVE ID# 3 writes is in D1417. The range is D200-D215 of SLAVE ID# 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to write into SLAVE ID 17~32 is saved in D1560~1575.
+D1564::When M1353=Off, SLAVE ID# 3 PLC LINK writes. Communication address for SLAVE ID# 3 writes is in D1417. The range is D200-D215 of SLAVE ID# 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to write into SLAVE ID 17~32 is saved in D1560~1575.
+D1565::When M1353=Off, SLAVE ID# 3 PLC LINK writes. Communication address for SLAVE ID# 3 writes is in D1417. The range is D200-D215 of SLAVE ID# 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to write into SLAVE ID 17~32 is saved in D1560~1575.
+D1566::When M1353=Off, SLAVE ID# 3 PLC LINK writes. Communication address for SLAVE ID# 3 writes is in D1417. The range is D200-D215 of SLAVE ID# 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to write into SLAVE ID 17~32 is saved in D1560~1575.
+D1567::When M1353=Off, SLAVE ID# 3 PLC LINK writes. Communication address for SLAVE ID# 3 writes is in D1417. The range is D200-D215 of SLAVE ID# 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to write into SLAVE ID 17~32 is saved in D1560~1575.
+D1568::When M1353=Off, SLAVE ID# 3 PLC LINK writes. Communication address for SLAVE ID# 3 writes is in D1417. The range is D200-D215 of SLAVE ID# 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to write into SLAVE ID 17~32 is saved in D1560~1575.
+D1569::When M1353=Off, SLAVE ID# 3 PLC LINK writes. Communication address for SLAVE ID# 3 writes is in D1417. The range is D200-D215 of SLAVE ID# 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to write into SLAVE ID 17~32 is saved in D1560~1575.
+D1570::When M1353=Off, SLAVE ID# 3 PLC LINK writes. Communication address for SLAVE ID# 3 writes is in D1417. The range is D200-D215 of SLAVE ID# 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to write into SLAVE ID 17~32 is saved in D1560~1575.
+D1571::When M1353=Off, SLAVE ID# 3 PLC LINK writes. Communication address for SLAVE ID# 3 writes is in D1417. The range is D200-D215 of SLAVE ID# 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to write into SLAVE ID 17~32 is saved in D1560~1575.
+D1572::When M1353=Off, SLAVE ID# 3 PLC LINK writes. Communication address for SLAVE ID# 3 writes is in D1417. The range is D200-D215 of SLAVE ID# 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to write into SLAVE ID 17~32 is saved in D1560~1575.
+D1573::When M1353=Off, SLAVE ID# 3 PLC LINK writes. Communication address for SLAVE ID# 3 writes is in D1417. The range is D200-D215 of SLAVE ID# 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to write into SLAVE ID 17~32 is saved in D1560~1575.
+D1574::When M1353=Off, SLAVE ID# 3 PLC LINK writes. Communication address for SLAVE ID# 3 writes is in D1417. The range is D200-D215 of SLAVE ID# 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to write into SLAVE ID 17~32 is saved in D1560~1575.
+D1575::When M1353=Off, SLAVE ID# 3 PLC LINK writes. Communication address for SLAVE ID# 3 writes is in D1417. The range is D200-D215 oSLAVE ID 3 PLC.For EH series MPU only, when M1353=On, the data length for PLC to write into SLAVE ID 17~32 is saved in D1560~1575.
+D1576::Data buffer to store the data read from Slave ID#4 when M1353=Off.(Only for EH) When M1353=On, the starting D register for PLC to save the data read from SLAVE ID#17~32 is saved in D1576~1591.
+D1577::Data buffer to store the data read from Slave ID#4 when M1353=Off.(Only for EH) When M1353=On, the starting D register for PLC to save the data read from SLAVE ID#17~32 is saved in D1576~1591.
+D1578::Data buffer to store the data read from Slave ID#4 when M1353=Off.(Only for EH) When M1353=On, the starting D register for PLC to save the data read from SLAVE ID#17~32 is saved in D1576~1591.
+D1579::Data buffer to store the data read from Slave ID#4 when M1353=Off.(Only for EH) When M1353=On, the starting D register for PLC to save the data read from SLAVE ID#17~32 is saved in D1576~1591.
+D1580::Data buffer to store the data read from Slave ID#4 when M1353=Off.(Only for EH) When M1353=On, the starting D register for PLC to save the data read from SLAVE ID#17~32 is saved in D1576~1591.
+D1581::Data buffer to store the data read from Slave ID#4 when M1353=Off.(Only for EH) When M1353=On, the starting D register for PLC to save the data read from SLAVE ID#17~32 is saved in D1576~1591.
+D1582::Data buffer to store the data read from Slave ID#4 when M1353=Off.(Only for EH) When M1353=On, the starting D register for PLC to save the data read from SLAVE ID#17~32 is saved in D1576~1591.
+D1583::Data buffer to store the data read from Slave ID#4 when M1353=Off.(Only for EH) When M1353=On, the starting D register for PLC to save the data read from SLAVE ID#17~32 is saved in D1576~1591.
+D1584::Data buffer to store the data read from Slave ID#4 when M1353=Off.(Only for EH) When M1353=On, the starting D register for PLC to save the data read from SLAVE ID#17~32 is saved in D1576~1591.
+D1585::Data buffer to store the data read from Slave ID#4 when M1353=Off.(Only for EH) When M1353=On, the starting D register for PLC to save the data read from SLAVE ID#17~32 is saved in D1576~1591.
+D1586::Data buffer to store the data read from Slave ID#4 when M1353=Off.(Only for EH) When M1353=On, the starting D register for PLC to save the data read from SLAVE ID#17~32 is saved in D1576~1591.
+D1587::Data buffer to store the data read from Slave ID#4 when M1353=Off.(Only for EH) When M1353=On, the starting D register for PLC to save the data read from SLAVE ID#17~32 is saved in D1576~1591.
+D1588::Data buffer to store the data read from Slave ID#4 when M1353=Off.(Only for EH) When M1353=On, the starting D register for PLC to save the data read from SLAVE ID#17~32 is saved in D1576~1591.
+D1589::Data buffer to store the data read from Slave ID#4 when M1353=Off.(Only for EH) When M1353=On, the starting D register for PLC to save the data read from SLAVE ID#17~32 is saved in D1576~1591.
+D1590::Data buffer to store the data read from Slave ID#4 when M1353=Off.(Only for EH) When M1353=On, the starting D register for PLC to save the data read from SLAVE ID#17~32 is saved in D1576~1591.
+D1591::Data buffer to store the data read from Slave ID#4 when M1353=Off.(Only for EH) When M1353=On, the starting D register for PLC to save the data read from SLAVE ID#17~32 is saved in D1576~1591.
+D1592::Data buffer to store the data to be written on Slave ID#4 when M1353=Off.M1353=On(Only available for EH)The started D registers setting for Master EH to pre-save the data write to Slave ID#17~32(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#17~32 by EH Master.
+D1593::Data buffer to store the data to be written on Slave ID#4 when M1353=Off.M1353=On(Only available for EH)The started D registers setting for Master EH to pre-save the data write to Slave ID#17~32(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#17~32 by EH Master.
+D1594::Data buffer to store the data to be written on Slave ID#4 when M1353=Off.M1353=On(Only available for EH)The started D registers setting for Master EH to pre-save the data write to Slave ID#17~32(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#17~32 by EH Master. 
+D1595::Data buffer to store the data to be written on Slave ID#4 when M1353=Off.M1353=On(Only available for EH)The started D registers setting for Master EH to pre-save the data write to Slave ID#17~32(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#17~32 by EH Master.
+D1596::Data buffer to store the data to be written on Slave ID#4 when M1353=Off.M1353=On(Only available for EH)The started D registers setting for Master EH to pre-save the data write to Slave ID#17~32(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#17~32 by EH Master.
+D1597::Data buffer to store the data to be written on Slave ID#4 when M1353=Off.M1353=On(Only available for EH)The started D registers setting for Master EH to pre-save the data write to Slave ID#17~32(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#17~32 by EH Master.
+D1598::Data buffer to store the data to be written on Slave ID#4 when M1353=Off.M1353=On(Only available for EH)The started D registers setting for Master EH to pre-save the data write to Slave ID#17~32(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#17~32 by EH Master.
+D1599::Data buffer to store the data to be written on Slave ID#4 when M1353=Off.M1353=On(Only available for EH)The started D registers setting for Master EH to pre-save the data write to Slave ID#17~32(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#17~32 by EH Master.
+D1600::Data buffer to store the data to be written on Slave ID#4 when M1353=Off.M1353=On(Only available for EH)The started D registers setting for Master EH to pre-save the data write to Slave ID#17~32(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#17~32 by EH Master.
+D1601::Data buffer to store the data to be written on Slave ID#4 when M1353=Off.M1353=On(Only available for EH)The started D registers setting for Master EH to pre-save the data write to Slave ID#17~32(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#17~32 by EH Master.
+D1602::Data buffer to store the data to be written on Slave ID#4 when M1353=Off.M1353=On(Only available for EH)The started D registers setting for Master EH to pre-save the data write to Slave ID#17~32(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#17~32 by EH Master.
+D1603::Data buffer to store the data to be written on Slave ID#4 when M1353=Off.M1353=On(Only available for EH)The started D registers setting for Master EH to pre-save the data write to Slave ID#17~32(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#17~32 by EH Master.
+D1604::Data buffer to store the data to be written on Slave ID#4 when M1353=Off.M1353=On(Only available for EH)The started D registers setting for Master EH to pre-save the data write to Slave ID#17~32(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#17~32 by EH Master.
+D1605::Data buffer to store the data to be written on Slave ID#4 when M1353=Off.M1353=On(Only available for EH)The started D registers setting for Master EH to pre-save the data write to Slave ID#17~32(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#17~32 by EH Master.
+D1606::Data buffer to store the data to be written on Slave ID#4 when M1353=Off.M1353=On(Only available for EH)The started D registers setting for Master EH to pre-save the data write to Slave ID#17~32(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#17~32 by EH Master.
+D1607::Data buffer to store the data to be written on Slave ID#4 when M1353=Off.M1353=On(Only available for EH)The started D registers setting for Master EH to pre-save the data write to Slave ID#17~32(Only for EH) When M1353=On, the starting D register No. to store data to be written on ID#17~32 by EH Master.
+D1608::SLAVE ID# 5 PLC LINK reads. Communication address for ID# 5 reads is in D1359. The range is D100-D115 of ID# 5 PLC.
+D1609::SLAVE ID# 5 PLC LINK reads. Communication address for ID# 5 reads is in D1359. The range is D100-D115 of ID# 5 PLC.
+D1610::SLAVE ID# 5 PLC LINK reads. Communication address for ID# 5 reads is in D1359. The range is D100-D115 of ID# 5 PLC.
+D1611::SLAVE ID# 5 PLC LINK reads. Communication address for ID# 5 reads is in D1359. The range is D100-D115 of ID# 5 PLC.
+D1612::SLAVE ID# 5 PLC LINK reads. Communication address for ID# 5 reads is in D1359. The range is D100-D115 of ID# 5 PLC.
+D1613::SLAVE ID# 5 PLC LINK reads. Communication address for ID# 5 reads is in D1359. The range is D100-D115 of ID# 5 PLC.
+D1614::SLAVE ID# 5 PLC LINK reads. Communication address for ID# 5 reads is in D1359. The range is D100-D115 of ID# 5 PLC.
+D1615::SLAVE ID# 5 PLC LINK reads. Communication address for ID# 5 reads is in D1359. The range is D100-D115 of ID# 5 PLC.
+D1616::SLAVE ID# 5 PLC LINK reads. Communication address for ID# 5 reads is in D1359. The range is D100-D115 of ID# 5 PLC.
+D1617::SLAVE ID# 5 PLC LINK reads. Communication address for ID# 5 reads is in D1359. The range is D100-D115 of ID# 5 PLC.
+D1618::SLAVE ID# 5 PLC LINK reads. Communication address for ID# 5 reads is in D1359. The range is D100-D115 of ID# 5 PLC.
+D1619::SLAVE ID# 5 PLC LINK reads. Communication address for ID# 5 reads is in D1359. The range is D100-D115 of ID# 5 PLC.
+D1620::SLAVE ID# 5 PLC LINK reads. Communication address for ID# 5 reads is in D1359. The range is D100-D115 of ID# 5 PLC.
+D1621::SLAVE ID# 5 PLC LINK reads. Communication address for ID# 5 reads is in D1359. The range is D100-D115 of ID# 5 PLC.
+D1622::SLAVE ID# 5 PLC LINK reads. Communication address for ID# 5 reads is in D1359. The range is D100-D115 of ID# 5 PLC.
+D1623::SLAVE ID# 5 PLC LINK reads. Communication address for ID# 5 reads is in D1359. The range is D100-D115 of ID# 5 PLC.
+D1624::SLAVE ID# 5 PLC LINK writes. Communication address for ID# 5 writes is in D1419. The range is D200-D215 of ID# 5 PLC.
+D1625::SLAVE ID# 5 PLC LINK writes. Communication address for ID# 5 writes is in D1419. The range is D200-D215 of ID# 5 PLC.
+D1626::SLAVE ID# 5 PLC LINK writes. Communication address for ID# 5 writes is in D1419. The range is D200-D215 of ID# 5 PLC.
+D1627::SLAVE ID# 5 PLC LINK writes. Communication address for ID# 5 writes is in D1419. The range is D200-D215 of ID# 5 PLC.
+D1628::SLAVE ID# 5 PLC LINK writes. Communication address for ID# 5 writes is in D1419. The range is D200-D215 of ID# 5 PLC.
+D1629::SLAVE ID# 5 PLC LINK writes. Communication address for ID# 5 writes is in D1419. The range is D200-D215 of ID# 5 PLC.
+D1630::SLAVE ID# 5 PLC LINK writes. Communication address for ID# 5 writes is in D1419. The range is D200-D215 of ID# 5 PLC.
+D1631::SLAVE ID# 5 PLC LINK writes. Communication address for ID# 5 writes is in D1419. The range is D200-D215 of ID# 5 PLC.
+D1632::SLAVE ID# 5 PLC LINK writes. Communication address for ID# 5 writes is in D1419. The range is D200-D215 of ID# 5 PLC.
+D1633::SLAVE ID# 5 PLC LINK writes. Communication address for ID# 5 writes is in D1419. The range is D200-D215 of ID# 5 PLC.
+D1634::SLAVE ID# 5 PLC LINK writes. Communication address for ID# 5 writes is in D1419. The range is D200-D215 of ID# 5 PLC.
+D1635::SLAVE ID# 5 PLC LINK writes. Communication address for ID# 5 writes is in D1419. The range is D200-D215 of ID# 5 PLC.
+D1636::SLAVE ID# 5 PLC LINK writes. Communication address for ID# 5 writes is in D1419. The range is D200-D215 of ID# 5 PLC.
+D1637::SLAVE ID# 5 PLC LINK writes. Communication address for ID# 5 writes is in D1419. The range is D200-D215 of ID# 5 PLC.
+D1638::SLAVE ID# 5 PLC LINK writes. Communication address for ID# 5 writes is in D1419. The range is D200-D215 of ID# 5 PLC.
+D1639::SLAVE ID# 5 PLC LINK writes. Communication address for ID# 5 writes is in D1419. The range is D200-D215 of ID# 5 PLC.
+D1640::SLAVE ID# 6 PLC LINK reads. Communication address for ID# 6 reads is in D1360. The range is D100-D115 of ID# 6 PLC.
+D1641::SLAVE ID# 6 PLC LINK reads. Communication address for ID# 6 reads is in D1360. The range is D100-D115 of ID# 6 PLC.
+D1642::SLAVE ID# 6 PLC LINK reads. Communication address for ID# 6 reads is in D1360. The range is D100-D115 of ID# 6 PLC.
+D1643::SLAVE ID# 6 PLC LINK reads. Communication address for ID# 6 reads is in D1360. The range is D100-D115 of ID# 6 PLC.
+D1644::SLAVE ID# 6 PLC LINK reads. Communication address for ID# 6 reads is in D1360. The range is D100-D115 of ID# 6 PLC.
+D1645::SLAVE ID# 6 PLC LINK reads. Communication address for ID# 6 reads is in D1360. The range is D100-D115 of ID# 6 PLC.
+D1646::SLAVE ID# 6 PLC LINK reads. Communication address for ID# 6 reads is in D1360. The range is D100-D115 of ID# 6 PLC.
+D1647::SLAVE ID# 6 PLC LINK reads. Communication address for ID# 6 reads is in D1360. The range is D100-D115 of ID# 6 PLC.
+D1648::SLAVE ID# 6 PLC LINK reads. Communication address for ID# 6 reads is in D1360. The range is D100-D115 of ID# 6 PLC.
+D1649::SLAVE ID# 6 PLC LINK reads. Communication address for ID# 6 reads is in D1360. The range is D100-D115 of ID# 6 PLC.
+D1650::SLAVE ID# 6 PLC LINK reads. Communication address for ID# 6 reads is in D1360. The range is D100-D115 of ID# 6 PLC.
+D1651::SLAVE ID# 6 PLC LINK reads. Communication address for ID# 6 reads is in D1360. The range is D100-D115 of ID# 6 PLC.
+D1652::SLAVE ID# 6 PLC LINK reads. Communication address for ID# 6 reads is in D1360. The range is D100-D115 of ID# 6 PLC.
+D1653::SLAVE ID# 6 PLC LINK reads. Communication address for ID# 6 reads is in D1360. The range is D100-D115 of ID# 6 PLC.
+D1654::SLAVE ID# 6 PLC LINK reads. Communication address for ID# 6 reads is in D1360. The range is D100-D115 of ID# 6 PLC.
+D1655::SLAVE ID# 6 PLC LINK reads. Communication address for ID# 6 reads is in D1360. The range is D100-D115 of ID# 6 PLC.
+D1656::SLAVE ID# 6 PLC LINK writes. Communication address for ID# 6 writes is in D1420. The range is D200-D215 of ID# 6 PLC.
+D1657::SLAVE ID# 6 PLC LINK writes. Communication address for ID# 6 writes is in D1420. The range is D200-D215 of ID# 6 PLC.
+D1658::SLAVE ID# 6 PLC LINK writes. Communication address for ID# 6 writes is in D1420. The range is D200-D215 of ID# 6 PLC.
+D1659::SLAVE ID# 6 PLC LINK writes. Communication address for ID# 6 writes is in D1420. The range is D200-D215 of ID# 6 PLC.
+D1660::SLAVE ID# 6 PLC LINK writes. Communication address for ID# 6 writes is in D1420. The range is D200-D215 of ID# 6 PLC.
+D1661::SLAVE ID# 6 PLC LINK writes. Communication address for ID# 6 writes is in D1420. The range is D200-D215 of ID# 6 PLC.
+D1662::SLAVE ID# 6 PLC LINK writes. Communication address for ID# 6 writes is in D1420. The range is D200-D215 of ID# 6 PLC.
+D1663::SLAVE ID# 6 PLC LINK writes. Communication address for ID# 6 writes is in D1420. The range is D200-D215 of ID# 6 PLC.
+D1664::SLAVE ID# 6 PLC LINK writes. Communication address for ID# 6 writes is in D1420. The range is D200-D215 of ID# 6 PLC.
+D1665::SLAVE ID# 6 PLC LINK writes. Communication address for ID# 6 writes is in D1420. The range is D200-D215 of ID# 6 PLC.
+D1666::SLAVE ID# 6 PLC LINK writes. Communication address for ID# 6 writes is in D1420. The range is D200-D215 of ID# 6 PLC.
+D1667::SLAVE ID# 6 PLC LINK writes. Communication address for ID# 6 writes is in D1420. The range is D200-D215 of ID# 6 PLC.
+D1668::SLAVE ID# 6 PLC LINK writes. Communication address for ID# 6 writes is in D1420. The range is D200-D215 of ID# 6 PLC.
+D1669::SLAVE ID# 6 PLC LINK writes. Communication address for ID# 6 writes is in D1420. The range is D200-D215 of ID# 6 PLC.
+D1670::SLAVE ID# 6 PLC LINK writes. Communication address for ID# 6 writes is in D1420. The range is D200-D215 of ID# 6 PLC.
+D1671::SLAVE ID# 6 PLC LINK writes. Communication address for ID# 6 writes is in D1420. The range is D200-D215 of ID# 6 PLC.
+D1672::SLAVE ID# 7 PLC LINK reads. Communication address for ID# 7 reads is in D1361. The range is D100-D115 of ID# 7 PLC.
+D1673::SLAVE ID# 7 PLC LINK reads. Communication address for ID# 7 reads is in D1361. The range is D100-D115 of ID# 7 PLC.
+D1674::SLAVE ID# 7 PLC LINK reads. Communication address for ID# 7 reads is in D1361. The range is D100-D115 of ID# 7 PLC.
+D1675::SLAVE ID# 7 PLC LINK reads. Communication address for ID# 7 reads is in D1361. The range is D100-D115 of ID# 7 PLC.
+D1676::SLAVE ID# 7 PLC LINK reads. Communication address for ID# 7 reads is in D1361. The range is D100-D115 of ID# 7 PLC.
+D1677::SLAVE ID# 7 PLC LINK reads. Communication address for ID# 7 reads is in D1361. The range is D100-D115 of ID# 7 PLC.
+D1678::SLAVE ID# 7 PLC LINK reads. Communication address for ID# 7 reads is in D1361. The range is D100-D115 of ID# 7 PLC.
+D1679::SLAVE ID# 7 PLC LINK reads. Communication address for ID# 7 reads is in D1361. The range is D100-D115 of ID# 7 PLC.
+D1680::SLAVE ID# 7 PLC LINK reads. Communication address for ID# 7 reads is in D1361. The range is D100-D115 of ID# 7 PLC.
+D1681::SLAVE ID# 7 PLC LINK reads. Communication address for ID# 7 reads is in D1361. The range is D100-D115 of ID# 7 PLC.
+D1682::SLAVE ID# 7 PLC LINK reads. Communication address for ID# 7 reads is in D1361. The range is D100-D115 of ID# 7 PLC.
+D1683::SLAVE ID# 7 PLC LINK reads. Communication address for ID# 7 reads is in D1361. The range is D100-D115 of ID# 7 PLC.
+D1684::SLAVE ID# 7 PLC LINK reads. Communication address for ID# 7 reads is in D1361. The range is D100-D115 of ID# 7 PLC.
+D1685::SLAVE ID# 7 PLC LINK reads. Communication address for ID# 7 reads is in D1361. The range is D100-D115 of ID# 7 PLC.
+D1686::SLAVE ID# 7 PLC LINK reads. Communication address for ID# 7 reads is in D1361. The range is D100-D115 of ID# 7 PLC.
+D1687::SLAVE ID# 7 PLC LINK reads. Communication address for ID# 7 reads is in D1361. The range is D100-D115 of ID# 7 PLC.
+D1688::SLAVE ID# 7 PLC LINK writes. Communication address for ID# 7 writes is in D1421. The range is D200-D215 of ID# 7 PLC.
+D1689::SLAVE ID# 7 PLC LINK writes. Communication address for ID# 7 writes is in D1421. The range is D200-D215 of ID# 7 PLC.
+D1690::SLAVE ID# 7 PLC LINK writes. Communication address for ID# 7 writes is in D1421. The range is D200-D215 of ID# 7 PLC.
+D1691::SLAVE ID# 7 PLC LINK writes. Communication address for ID# 7 writes is in D1421. The range is D200-D215 of ID# 7 PLC.
+D1692::SLAVE ID# 7 PLC LINK writes. Communication address for ID# 7 writes is in D1421. The range is D200-D215 of ID# 7 PLC.
+D1693::SLAVE ID# 7 PLC LINK writes. Communication address for ID# 7 writes is in D1421. The range is D200-D215 of ID# 7 PLC.
+D1694::SLAVE ID# 7 PLC LINK writes. Communication address for ID# 7 writes is in D1421. The range is D200-D215 of ID# 7 PLC.
+D1695::SLAVE ID# 7 PLC LINK writes. Communication address for ID# 7 writes is in D1421. The range is D200-D215 of ID# 7 PLC.
+D1696::SLAVE ID# 7 PLC LINK writes. Communication address for ID# 7 writes is in D1421. The range is D200-D215 of ID# 7 PLC.
+D1697::SLAVE ID# 7 PLC LINK writes. Communication address for ID# 7 writes is in D1421. The range is D200-D215 of ID# 7 PLC.
+D1698::SLAVE ID# 7 PLC LINK writes. Communication address for ID# 7 writes is in D1421. The range is D200-D215 of ID# 7 PLC.
+D1699::SLAVE ID# 7 PLC LINK writes. Communication address for ID# 7 writes is in D1421. The range is D200-D215 of ID# 7 PLC.
+D1700::SLAVE ID# 7 PLC LINK writes. Communication address for ID# 7 writes is in D1421. The range is D200-D215 of ID# 7 PLC.
+D1701::SLAVE ID# 7 PLC LINK writes. Communication address for ID# 7 writes is in D1421. The range is D200-D215 of ID# 7 PLC.
+D1702::SLAVE ID# 7 PLC LINK writes. Communication address for ID# 7 writes is in D1421. The range is D200-D215 of ID# 7 PLC.
+D1703::SLAVE ID# 7 PLC LINK writes. Communication address for ID# 7 writes is in D1421. The range is D200-D215 of ID# 7 PLC.
+D1704::SLAVE ID# 8 PLC LINK reads. Communication address for ID# 8 reads is in D1362. The range is D100-D115 of ID# 8 PLC.
+D1705::SLAVE ID# 8 PLC LINK reads. Communication address for ID# 8 reads is in D1362. The range is D100-D115 of ID# 8 PLC.
+D1706::SLAVE ID# 8 PLC LINK reads. Communication address for ID# 8 reads is in D1362. The range is D100-D115 of ID# 8 PLC.
+D1707::SLAVE ID# 8 PLC LINK reads. Communication address for ID# 8 reads is in D1362. The range is D100-D115 of ID# 8 PLC.
+D1708::SLAVE ID# 8 PLC LINK reads. Communication address for ID# 8 reads is in D1362. The range is D100-D115 of ID# 8 PLC.
+D1709::SLAVE ID# 8 PLC LINK reads. Communication address for ID# 8 reads is in D1362. The range is D100-D115 of ID# 8 PLC.
+D1710::SLAVE ID# 8 PLC LINK reads. Communication address for ID# 8 reads is in D1362. The range is D100-D115 of ID# 8 PLC.
+D1711::SLAVE ID# 8 PLC LINK reads. Communication address for ID# 8 reads is in D1362. The range is D100-D115 of ID# 8 PLC.
+D1712::SLAVE ID# 8 PLC LINK reads. Communication address for ID# 8 reads is in D1362. The range is D100-D115 of ID# 8 PLC.
+D1713::SLAVE ID# 8 PLC LINK reads. Communication address for ID# 8 reads is in D1362. The range is D100-D115 of ID# 8 PLC.
+D1714::SLAVE ID# 8 PLC LINK reads. Communication address for ID# 8 reads is in D1362. The range is D100-D115 of ID# 8 PLC.
+D1715::SLAVE ID# 8 PLC LINK reads. Communication address for ID# 8 reads is in D1362. The range is D100-D115 of ID# 8 PLC.
+D1716::SLAVE ID# 8 PLC LINK reads. Communication address for ID# 8 reads is in D1362. The range is D100-D115 of ID# 8 PLC.
+D1717::SLAVE ID# 8 PLC LINK reads. Communication address for ID# 8 reads is in D1362. The range is D100-D115 of ID# 8 PLC.
+D1718::SLAVE ID# 8 PLC LINK reads. Communication address for ID# 8 reads is in D1362. The range is D100-D115 of ID# 8 PLC.
+D1719::SLAVE ID# 8 PLC LINK reads. Communication address for ID# 8 reads is in D1362. The range is D100-D115 of ID# 8 PLC.
+D1720::SLAVE ID# 8 PLC LINK writes. Communication address for ID# 8 writes is in D1422. The range is D200-D215 of ID# 8 PLC.
+D1721::SLAVE ID# 8 PLC LINK writes. Communication address for ID# 8 writes is in D1422. The range is D200-D215 of ID# 8 PLC.
+D1722::SLAVE ID# 8 PLC LINK writes. Communication address for ID# 8 writes is in D1422. The range is D200-D215 of ID# 8 PLC.
+D1723::SLAVE ID# 8 PLC LINK writes. Communication address for ID# 8 writes is in D1422. The range is D200-D215 of ID# 8 PLC.
+D1724::SLAVE ID# 8 PLC LINK writes. Communication address for ID# 8 writes is in D1422. The range is D200-D215 of ID# 8 PLC.
+D1725::SLAVE ID# 8 PLC LINK writes. Communication address for ID# 8 writes is in D1422. The range is D200-D215 of ID# 8 PLC.
+D1726::SLAVE ID# 8 PLC LINK writes. Communication address for ID# 8 writes is in D1422. The range is D200-D215 of ID# 8 PLC.
+D1727::SLAVE ID# 8 PLC LINK writes. Communication address for ID# 8 writes is in D1422. The range is D200-D215 of ID# 8 PLC.
+D1728::SLAVE ID# 8 PLC LINK writes. Communication address for ID# 8 writes is in D1422. The range is D200-D215 of ID# 8 PLC.
+D1729::SLAVE ID# 8 PLC LINK writes. Communication address for ID# 8 writes is in D1422. The range is D200-D215 of ID# 8 PLC.
+D1730::SLAVE ID# 8 PLC LINK writes. Communication address for ID# 8 writes is in D1422. The range is D200-D215 of ID# 8 PLC.
+D1731::SLAVE ID# 8 PLC LINK writes. Communication address for ID# 8 writes is in D1422. The range is D200-D215 of ID# 8 PLC.
+D1732::SLAVE ID# 8 PLC LINK writes. Communication address for ID# 8 writes is in D1422. The range is D200-D215 of ID# 8 PLC.
+D1733::SLAVE ID# 8 PLC LINK writes. Communication address for ID# 8 writes is in D1422. The range is D200-D215 of ID# 8 PLC.
+D1734::SLAVE ID# 8 PLC LINK writes. Communication address for ID# 8 writes is in D1422. The range is D200-D215 of ID# 8 PLC.
+D1735::SLAVE ID# 8 PLC LINK writes. Communication address for ID# 8 writes is in D1422. The range is D200-D215 of ID# 8 PLC.
+D1736::SLAVE ID# 9 PLC LINK reads. Communication address for ID# 9 reads is in D1363. The range is D100-D115 of ID# 9 PLC.
+D1737::SLAVE ID# 9 PLC LINK reads. Communication address for ID# 9 reads is in D1363. The range is D100-D115 of ID# 9 PLC.
+D1738::SLAVE ID# 9 PLC LINK reads. Communication address for ID# 9 reads is in D1363. The range is D100-D115 of ID# 9 PLC.
+D1739::SLAVE ID# 9 PLC LINK reads. Communication address for ID# 9 reads is in D1363. The range is D100-D115 of ID# 9 PLC.
+D1740::SLAVE ID# 9 PLC LINK reads. Communication address for ID# 9 reads is in D1363. The range is D100-D115 of ID# 9 PLC.
+D1741::SLAVE ID# 9 PLC LINK reads. Communication address for ID# 9 reads is in D1363. The range is D100-D115 of ID# 9 PLC.
+D1742::SLAVE ID# 9 PLC LINK reads. Communication address for ID# 9 reads is in D1363. The range is D100-D115 of ID# 9 PLC.
+D1743::SLAVE ID# 9 PLC LINK reads. Communication address for ID# 9 reads is in D1363. The range is D100-D115 of ID# 9 PLC.
+D1744::SLAVE ID# 9 PLC LINK reads. Communication address for ID# 9 reads is in D1363. The range is D100-D115 of ID# 9 PLC.
+D1745::SLAVE ID# 9 PLC LINK reads. Communication address for ID# 9 reads is in D1363. The range is D100-D115 of ID# 9 PLC.
+D1746::SLAVE ID# 9 PLC LINK reads. Communication address for ID# 9 reads is in D1363. The range is D100-D115 of ID# 9 PLC.
+D1747::SLAVE ID# 9 PLC LINK reads. Communication address for ID# 9 reads is in D1363. The range is D100-D115 of ID# 9 PLC.
+D1748::SLAVE ID# 9 PLC LINK reads. Communication address for ID# 9 reads is in D1363. The range is D100-D115 of ID# 9 PLC.
+D1749::SLAVE ID# 9 PLC LINK reads. Communication address for ID# 9 reads is in D1363. The range is D100-D115 of ID# 9 PLC.
+D1750::SLAVE ID# 9 PLC LINK reads. Communication address for ID# 9 reads is in D1363. The range is D100-D115 of ID# 9 PLC.
+D1751::SLAVE ID# 9 PLC LINK reads. Communication address for ID# 9 reads is in D1363. The range is D100-D115 of ID# 9 PLC.
+D1752::SLAVE ID# 9 PLC LINK writes. Communication address for ID# 9 writes is in D1423. The range is D200-D215 of ID# 9 PLC.
+D1753::SLAVE ID# 9 PLC LINK writes. Communication address for ID# 9 writes is in D1423. The range is D200-D215 of ID# 9 PLC.
+D1754::SLAVE ID# 9 PLC LINK writes. Communication address for ID# 9 writes is in D1423. The range is D200-D215 of ID# 9 PLC.
+D1755::SLAVE ID# 9 PLC LINK writes. Communication address for ID# 9 writes is in D1423. The range is D200-D215 of ID# 9 PLC.
+D1756::SLAVE ID# 9 PLC LINK writes. Communication address for ID# 9 writes is in D1423. The range is D200-D215 of ID# 9 PLC.
+D1757::SLAVE ID# 9 PLC LINK writes. Communication address for ID# 9 writes is in D1423. The range is D200-D215 of ID# 9 PLC.
+D1758::SLAVE ID# 9 PLC LINK writes. Communication address for ID# 9 writes is in D1423. The range is D200-D215 of ID# 9 PLC.
+D1759::SLAVE ID# 9 PLC LINK writes. Communication address for ID# 9 writes is in D1423. The range is D200-D215 of ID# 9 PLC.
+D1760::SLAVE ID# 9 PLC LINK writes. Communication address for ID# 9 writes is in D1423. The range is D200-D215 of ID# 9 PLC.
+D1761::SLAVE ID# 9 PLC LINK writes. Communication address for ID# 9 writes is in D1423. The range is D200-D215 of ID# 9 PLC.
+D1762::SLAVE ID# 9 PLC LINK writes. Communication address for ID# 9 writes is in D1423. The range is D200-D215 of ID# 9 PLC.
+D1763::SLAVE ID# 9 PLC LINK writes. Communication address for ID# 9 writes is in D1423. The range is D200-D215 of ID# 9 PLC.
+D1764::SLAVE ID# 9 PLC LINK writes. Communication address for ID# 9 writes is in D1423. The range is D200-D215 of ID# 9 PLC.
+D1765::SLAVE ID# 9 PLC LINK writes. Communication address for ID# 9 writes is in D1423. The range is D200-D215 of ID# 9 PLC.
+D1766::SLAVE ID# 9 PLC LINK writes. Communication address for ID# 9 writes is in D1423. The range is D200-D215 of ID# 9 PLC.
+D1767::SLAVE ID# 9 PLC LINK writes. Communication address for ID# 9 writes is in D1423. The range is D200-D215 of ID# 9 PLC.
+D1768::SLAVE ID# 10 PLC LINK reads. Communication address for ID# 10 reads is in D1364. The range is D100-D115 of ID# 10 PLC.
+D1769::SLAVE ID# 10 PLC LINK reads. Communication address for ID# 10 reads is in D1364. The range is D100-D115 of ID# 10 PLC.
+D1770::SLAVE ID# 10 PLC LINK reads. Communication address for ID# 10 reads is in D1364. The range is D100-D115 of ID# 10 PLC.
+D1771::SLAVE ID# 10 PLC LINK reads. Communication address for ID# 10 reads is in D1364. The range is D100-D115 of ID# 10 PLC.
+D1772::SLAVE ID# 10 PLC LINK reads. Communication address for ID# 10 reads is in D1364. The range is D100-D115 of ID# 10 PLC.
+D1773::SLAVE ID# 10 PLC LINK reads. Communication address for ID# 10 reads is in D1364. The range is D100-D115 of ID# 10 PLC.
+D1774::SLAVE ID# 10 PLC LINK reads. Communication address for ID# 10 reads is in D1364. The range is D100-D115 of ID# 10 PLC.
+D1775::SLAVE ID# 10 PLC LINK reads. Communication address for ID# 10 reads is in D1364. The range is D100-D115 of ID# 10 PLC.
+D1776::SLAVE ID# 10 PLC LINK reads. Communication address for ID# 10 reads is in D1364. The range is D100-D115 of ID# 10 PLC.
+D1777::SLAVE ID# 10 PLC LINK reads. Communication address for ID# 10 reads is in D1364. The range is D100-D115 of ID# 10 PLC.
+D1778::SLAVE ID# 10 PLC LINK reads. Communication address for ID# 10 reads is in D1364. The range is D100-D115 of ID# 10 PLC.
+D1779::SLAVE ID# 10 PLC LINK reads. Communication address for ID# 10 reads is in D1364. The range is D100-D115 of ID# 10 PLC.
+D1780::SLAVE ID# 10 PLC LINK reads. Communication address for ID# 10 reads is in D1364. The range is D100-D115 of ID# 10 PLC.
+D1781::SLAVE ID# 10 PLC LINK reads. Communication address for ID# 10 reads is in D1364. The range is D100-D115 of ID# 10 PLC.
+D1782::SLAVE ID# 10 PLC LINK reads. Communication address for ID# 10 reads is in D1364. The range is D100-D115 of ID# 10 PLC.
+D1783::SLAVE ID# 10 PLC LINK reads. Communication address for ID# 10 reads is in D1364. The range is D100-D115 of ID# 10 PLC.
+D1784::SLAVE ID# 10 PLC LINK writes. Communication address for ID# 10 writes is in D1424. The range is D200-D215 of ID# 10 PLC.
+D1785::SLAVE ID# 10 PLC LINK writes. Communication address for ID# 10 writes is in D1424. The range is D200-D215 of ID# 10 PLC.
+D1786::SLAVE ID# 10 PLC LINK writes. Communication address for ID# 10 writes is in D1424. The range is D200-D215 of ID# 10 PLC.
+D1787::SLAVE ID# 10 PLC LINK writes. Communication address for ID# 10 writes is in D1424. The range is D200-D215 of ID# 10 PLC.
+D1788::SLAVE ID# 10 PLC LINK writes. Communication address for ID# 10 writes is in D1424. The range is D200-D215 of ID# 10 PLC.
+D1789::SLAVE ID# 10 PLC LINK writes. Communication address for ID# 10 writes is in D1424. The range is D200-D215 of ID# 10 PLC.
+D1790::SLAVE ID# 10 PLC LINK writes. Communication address for ID# 10 writes is in D1424. The range is D200-D215 of ID# 10 PLC.
+D1791::SLAVE ID# 10 PLC LINK writes. Communication address for ID# 10 writes is in D1424. The range is D200-D215 of ID# 10 PLC.
+D1792::SLAVE ID# 10 PLC LINK writes. Communication address for ID# 10 writes is in D1424. The range is D200-D215 of ID# 10 PLC.
+D1793::SLAVE ID# 10 PLC LINK writes. Communication address for ID# 10 writes is in D1424. The range is D200-D215 of ID# 10 PLC.
+D1794::SLAVE ID# 10 PLC LINK writes. Communication address for ID# 10 writes is in D1424. The range is D200-D215 of ID# 10 PLC.
+D1795::SLAVE ID# 10 PLC LINK writes. Communication address for ID# 10 writes is in D1424. The range is D200-D215 of ID# 10 PLC.
+D1796::SLAVE ID# 10 PLC LINK writes. Communication address for ID# 10 writes is in D1424. The range is D200-D215 of ID# 10 PLC.
+D1797::SLAVE ID# 10 PLC LINK writes. Communication address for ID# 10 writes is in D1424. The range is D200-D215 of ID# 10 PLC.
+D1798::SLAVE ID# 10 PLC LINK writes. Communication address for ID# 10 writes is in D1424. The range is D200-D215 of ID# 10 PLC.
+D1799::SLAVE ID# 10 PLC LINK writes. Communication address for ID# 10 writes is in D1424. The range is D200-D215 of ID# 10 PLC.
+D1800::SLAVE ID# 11 PLC LINK reads. Communication address for ID# 11 reads is in D1365. The range is D100-D115 of ID# 11 PLC.
+D1801::SLAVE ID# 11 PLC LINK reads. Communication address for ID# 11 reads is in D1365. The range is D100-D115 of ID# 11 PLC.
+D1802::SLAVE ID# 11 PLC LINK reads. Communication address for ID# 11 reads is in D1365. The range is D100-D115 of ID# 11 PLC.
+D1803::SLAVE ID# 11 PLC LINK reads. Communication address for ID# 11 reads is in D1365. The range is D100-D115 of ID# 11 PLC.
+D1804::SLAVE ID# 11 PLC LINK reads. Communication address for ID# 11 reads is in D1365. The range is D100-D115 of ID# 11 PLC.
+D1805::SLAVE ID# 11 PLC LINK reads. Communication address for ID# 11 reads is in D1365. The range is D100-D115 of ID# 11 PLC.
+D1806::SLAVE ID# 11 PLC LINK reads. Communication address for ID# 11 reads is in D1365. The range is D100-D115 of ID# 11 PLC.
+D1807::SLAVE ID# 11 PLC LINK reads. Communication address for ID# 11 reads is in D1365. The range is D100-D115 of ID# 11 PLC.
+D1808::SLAVE ID# 11 PLC LINK reads. Communication address for ID# 11 reads is in D1365. The range is D100-D115 of ID# 11 PLC.
+D1809::SLAVE ID# 11 PLC LINK reads. Communication address for ID# 11 reads is in D1365. The range is D100-D115 of ID# 11 PLC.
+D1810::SLAVE ID# 11 PLC LINK reads. Communication address for ID# 11 reads is in D1365. The range is D100-D115 of ID# 11 PLC.
+D1811::SLAVE ID# 11 PLC LINK reads. Communication address for ID# 11 reads is in D1365. The range is D100-D115 of ID# 11 PLC.
+D1812::SLAVE ID# 11 PLC LINK reads. Communication address for ID# 11 reads is in D1365. The range is D100-D115 of ID# 11 PLC.
+D1813::SLAVE ID# 11 PLC LINK reads. Communication address for ID# 11 reads is in D1365. The range is D100-D115 of ID# 11 PLC.
+D1814::SLAVE ID# 11 PLC LINK reads. Communication address for ID# 11 reads is in D1365. The range is D100-D115 of ID# 11 PLC.
+D1815::SLAVE ID# 11 PLC LINK reads. Communication address for ID# 11 reads is in D1365. The range is D100-D115 of ID# 11 PLC.
+D1816::SLAVE ID# 11 PLC LINK writes. Communication address for ID# 11 writes is in D1425. The range is D200-D215 of ID# 11 PLC.
+D1817::SLAVE ID# 11 PLC LINK writes. Communication address for ID# 11 writes is in D1425. The range is D200-D215 of ID# 11 PLC.
+D1818::SLAVE ID# 11 PLC LINK writes. Communication address for ID# 11 writes is in D1425. The range is D200-D215 of ID# 11 PLC.
+D1819::SLAVE ID# 11 PLC LINK writes. Communication address for ID# 11 writes is in D1425. The range is D200-D215 of ID# 11 PLC.
+D1820::SLAVE ID# 11 PLC LINK writes. Communication address for ID# 11 writes is in D1425. The range is D200-D215 of ID# 11 PLC.
+D1821::SLAVE ID# 11 PLC LINK writes. Communication address for ID# 11 writes is in D1425. The range is D200-D215 of ID# 11 PLC.
+D1822::SLAVE ID# 11 PLC LINK writes. Communication address for ID# 11 writes is in D1425. The range is D200-D215 of ID# 11 PLC.
+D1823::SLAVE ID# 11 PLC LINK writes. Communication address for ID# 11 writes is in D1425. The range is D200-D215 of ID# 11 PLC.
+D1824::SLAVE ID# 11 PLC LINK writes. Communication address for ID# 11 writes is in D1425. The range is D200-D215 of ID# 11 PLC.
+D1825::SLAVE ID# 11 PLC LINK writes. Communication address for ID# 11 writes is in D1425. The range is D200-D215 of ID# 11 PLC.
+D1826::SLAVE ID# 11 PLC LINK writes. Communication address for ID# 11 writes is in D1425. The range is D200-D215 of ID# 11 PLC.
+D1827::SLAVE ID# 11 PLC LINK writes. Communication address for ID# 11 writes is in D1425. The range is D200-D215 of ID# 11 PLC.
+D1828::SLAVE ID# 11 PLC LINK writes. Communication address for ID# 11 writes is in D1425. The range is D200-D215 of ID# 11 PLC.
+D1829::SLAVE ID# 11 PLC LINK writes. Communication address for ID# 11 writes is in D1425. The range is D200-D215 of ID# 11 PLC.
+D1830::SLAVE ID# 11 PLC LINK writes. Communication address for ID# 11 writes is in D1425. The range is D200-D215 of ID# 11 PLC.
+D1831::SLAVE ID# 11 PLC LINK writes. Communication address for ID# 11 writes is in D1425. The range is D200-D215 of ID# 11 PLC.
+D1832::SLAVE ID# 12 PLC LINK reads. Communication address for ID# 12 reads is in D1366. The range is D100-D115 of ID# 12 PLC.
+D1833::SLAVE ID# 12 PLC LINK reads. Communication address for ID# 12 reads is in D1366. The range is D100-D115 of ID# 12 PLC.
+D1834::SLAVE ID# 12 PLC LINK reads. Communication address for ID# 12 reads is in D1366. The range is D100-D115 of ID# 12 PLC.
+D1835::SLAVE ID# 12 PLC LINK reads. Communication address for ID# 12 reads is in D1366. The range is D100-D115 of ID# 12 PLC.
+D1836::SLAVE ID# 12 PLC LINK reads. Communication address for ID# 12 reads is in D1366. The range is D100-D115 of ID# 12 PLC.
+D1837::SLAVE ID# 12 PLC LINK reads. Communication address for ID# 12 reads is in D1366. The range is D100-D115 of ID# 12 PLC.
+D1838::SLAVE ID# 12 PLC LINK reads. Communication address for ID# 12 reads is in D1366. The range is D100-D115 of ID# 12 PLC.
+D1839::SLAVE ID# 12 PLC LINK reads. Communication address for ID# 12 reads is in D1366. The range is D100-D115 of ID# 12 PLC.
+D1840::SLAVE ID# 12 PLC LINK reads. Communication address for ID# 12 reads is in D1366. The range is D100-D115 of ID# 12 PLC.
+D1841::SLAVE ID# 12 PLC LINK reads. Communication address for ID# 12 reads is in D1366. The range is D100-D115 of ID# 12 PLC.
+D1842::SLAVE ID# 12 PLC LINK reads. Communication address for ID# 12 reads is in D1366. The range is D100-D115 of ID# 12 PLC.
+D1843::SLAVE ID# 12 PLC LINK reads. Communication address for ID# 12 reads is in D1366. The range is D100-D115 of ID# 12 PLC.
+D1844::SLAVE ID# 12 PLC LINK reads. Communication address for ID# 12 reads is in D1366. The range is D100-D115 of ID# 12 PLC.
+D1845::SLAVE ID# 12 PLC LINK reads. Communication address for ID# 12 reads is in D1366. The range is D100-D115 of ID# 12 PLC.
+D1846::SLAVE ID# 12 PLC LINK reads. Communication address for ID# 12 reads is in D1366. The range is D100-D115 of ID# 12 PLC.
+D1847::SLAVE ID# 12 PLC LINK reads. Communication address for ID# 12 reads is in D1366. The range is D100-D115 of ID# 12 PLC.
+D1848::SLAVE ID# 12 PLC LINK writes. Communication address for ID# 12 writes is in D1426. The range is D200-D215 of ID# 12 PLC.
+D1849::SLAVE ID# 12 PLC LINK writes. Communication address for ID# 12 writes is in D1426. The range is D200-D215 of ID# 12 PLC.
+D1850::SLAVE ID# 12 PLC LINK writes. Communication address for ID# 12 writes is in D1426. The range is D200-D215 of ID# 12 PLC.
+D1851::SLAVE ID# 12 PLC LINK writes. Communication address for ID# 12 writes is in D1426. The range is D200-D215 of ID# 12 PLC.
+D1852::SLAVE ID# 12 PLC LINK writes. Communication address for ID# 12 writes is in D1426. The range is D200-D215 of ID# 12 PLC.
+D1853::SLAVE ID# 12 PLC LINK writes. Communication address for ID# 12 writes is in D1426. The range is D200-D215 of ID# 12 PLC.
+D1854::SLAVE ID# 12 PLC LINK writes. Communication address for ID# 12 writes is in D1426. The range is D200-D215 of ID# 12 PLC.
+D1855::SLAVE ID# 12 PLC LINK writes. Communication address for ID# 12 writes is in D1426. The range is D200-D215 of ID# 12 PLC.
+D1856::SLAVE ID# 12 PLC LINK writes. Communication address for ID# 12 writes is in D1426. The range is D200-D215 of ID# 12 PLC.
+D1857::SLAVE ID# 12 PLC LINK writes. Communication address for ID# 12 writes is in D1426. The range is D200-D215 of ID# 12 PLC.
+D1858::SLAVE ID# 12 PLC LINK writes. Communication address for ID# 12 writes is in D1426. The range is D200-D215 of ID# 12 PLC.
+D1859::SLAVE ID# 12 PLC LINK writes. Communication address for ID# 12 writes is in D1426. The range is D200-D215 of ID# 12 PLC.
+D1860::SLAVE ID# 12 PLC LINK writes. Communication address for ID# 12 writes is in D1426. The range is D200-D215 of ID# 12 PLC.
+D1861::SLAVE ID# 12 PLC LINK writes. Communication address for ID# 12 writes is in D1426. The range is D200-D215 of ID# 12 PLC.
+D1862::SLAVE ID# 12 PLC LINK writes. Communication address for ID# 12 writes is in D1426. The range is D200-D215 of ID# 12 PLC.
+D1863::SLAVE ID# 12 PLC LINK writes. Communication address for ID# 12 writes is in D1426. The range is D200-D215 of ID# 12 PLC.
+D1864::SLAVE ID# 13 PLC LINK reads. Communication address for ID# 13 reads is in D1367. The range is D100-D115 of ID# 13 PLC.
+D1865::SLAVE ID# 13 PLC LINK reads. Communication address for ID# 13 reads is in D1367. The range is D100-D115 of ID# 13 PLC.
+D1866::SLAVE ID# 13 PLC LINK reads. Communication address for ID# 13 reads is in D1367. The range is D100-D115 of ID# 13 PLC.
+D1867::SLAVE ID# 13 PLC LINK reads. Communication address for ID# 13 reads is in D1367. The range is D100-D115 of ID# 13 PLC.
+D1868::SLAVE ID# 13 PLC LINK reads. Communication address for ID# 13 reads is in D1367. The range is D100-D115 of ID# 13 PLC.
+D1869::SLAVE ID# 13 PLC LINK reads. Communication address for ID# 13 reads is in D1367. The range is D100-D115 of ID# 13 PLC.
+D1870::SLAVE ID# 13 PLC LINK reads. Communication address for ID# 13 reads is in D1367. The range is D100-D115 of ID# 13 PLC.
+D1871::SLAVE ID# 13 PLC LINK reads. Communication address for ID# 13 reads is in D1367. The range is D100-D115 of ID# 13 PLC.
+D1872::SLAVE ID# 13 PLC LINK reads. Communication address for ID# 13 reads is in D1367. The range is D100-D115 of ID# 13 PLC.
+D1873::SLAVE ID# 13 PLC LINK reads. Communication address for ID# 13 reads is in D1367. The range is D100-D115 of ID# 13 PLC.
+D1874::SLAVE ID# 13 PLC LINK reads. Communication address for ID# 13 reads is in D1367. The range is D100-D115 of ID# 13 PLC.
+D1875::SLAVE ID# 13 PLC LINK reads. Communication address for ID# 13 reads is in D1367. The range is D100-D115 of ID# 13 PLC.
+D1876::SLAVE ID# 13 PLC LINK reads. Communication address for ID# 13 reads is in D1367. The range is D100-D115 of ID# 13 PLC.
+D1877::SLAVE ID# 13 PLC LINK reads. Communication address for ID# 13 reads is in D1367. The range is D100-D115 of ID# 13 PLC.
+D1878::SLAVE ID# 13 PLC LINK reads. Communication address for ID# 13 reads is in D1367. The range is D100-D115 of ID# 13 PLC.
+D1879::SLAVE ID# 13 PLC LINK reads. Communication address for ID# 13 reads is in D1367. The range is D100-D115 of ID# 13 PLC.
+D1880::SLAVE ID# 13 PLC LINK writes. Communication address for ID# 13 writes is in D1427. The range is D200-D215 of ID# 13 PLC.
+D1881::SLAVE ID# 13 PLC LINK writes. Communication address for ID# 13 writes is in D1427. The range is D200-D215 of ID# 13 PLC.
+D1882::SLAVE ID# 13 PLC LINK writes. Communication address for ID# 13 writes is in D1427. The range is D200-D215 of ID# 13 PLC.
+D1883::SLAVE ID# 13 PLC LINK writes. Communication address for ID# 13 writes is in D1427. The range is D200-D215 of ID# 13 PLC.
+D1884::SLAVE ID# 13 PLC LINK writes. Communication address for ID# 13 writes is in D1427. The range is D200-D215 of ID# 13 PLC.
+D1885::SLAVE ID# 13 PLC LINK writes. Communication address for ID# 13 writes is in D1427. The range is D200-D215 of ID# 13 PLC.
+D1886::SLAVE ID# 13 PLC LINK writes. Communication address for ID# 13 writes is in D1427. The range is D200-D215 of ID# 13 PLC.
+D1887::SLAVE ID# 13 PLC LINK writes. Communication address for ID# 13 writes is in D1427. The range is D200-D215 of ID# 13 PLC.
+D1888::SLAVE ID# 13 PLC LINK writes. Communication address for ID# 13 writes is in D1427. The range is D200-D215 of ID# 13 PLC.
+D1889::SLAVE ID# 13 PLC LINK writes. Communication address for ID# 13 writes is in D1427. The range is D200-D215 of ID# 13 PLC.
+D1890::SLAVE ID# 13 PLC LINK writes. Communication address for ID# 13 writes is in D1427. The range is D200-D215 of ID# 13 PLC.
+D1891::SLAVE ID# 13 PLC LINK writes. Communication address for ID# 13 writes is in D1427. The range is D200-D215 of ID# 13 PLC.
+D1892::SLAVE ID# 13 PLC LINK writes. Communication address for ID# 13 writes is in D1427. The range is D200-D215 of ID# 13 PLC.
+D1893::SLAVE ID# 13 PLC LINK writes. Communication address for ID# 13 writes is in D1427. The range is D200-D215 of ID# 13 PLC.
+D1894::SLAVE ID# 13 PLC LINK writes. Communication address for ID# 13 writes is in D1427. The range is D200-D215 of ID# 13 PLC.
+D1895::SLAVE ID# 13 PLC LINK writes. Communication address for ID# 13 writes is in D1427. The range is D200-D215 of ID# 13 PLC.
+D1896::SLAVE ID# 14 PLC LINK reads. Communication address for ID# 14 reads is in D1368. The range is D100-D115 of ID# 14 PLC.
+D1897::SLAVE ID# 14 PLC LINK reads. Communication address for ID# 14 reads is in D1368. The range is D100-D115 of ID# 14 PLC.
+D1898::SLAVE ID# 14 PLC LINK reads. Communication address for ID# 14 reads is in D1368. The range is D100-D115 of ID# 14 PLC.
+D1899::SLAVE ID# 14 PLC LINK reads. Communication address for ID# 14 reads is in D1368. The range is D100-D115 of ID# 14 PLC.
+D1900::SLAVE ID# 14 PLC LINK reads. Communication address for ID# 14 reads is in D1368. The range is D100-D115 of ID# 14 PLC.
+D1901::SLAVE ID# 14 PLC LINK reads. Communication address for ID# 14 reads is in D1368. The range is D100-D115 of ID# 14 PLC.
+D1902::SLAVE ID# 14 PLC LINK reads. Communication address for ID# 14 reads is in D1368. The range is D100-D115 of ID# 14 PLC.
+D1903::SLAVE ID# 14 PLC LINK reads. Communication address for ID# 14 reads is in D1368. The range is D100-D115 of ID# 14 PLC.
+D1904::SLAVE ID# 14 PLC LINK reads. Communication address for ID# 14 reads is in D1368. The range is D100-D115 of ID# 14 PLC.
+D1905::SLAVE ID# 14 PLC LINK reads. Communication address for ID# 14 reads is in D1368. The range is D100-D115 of ID# 14 PLC.
+D1906::SLAVE ID# 14 PLC LINK reads. Communication address for ID# 14 reads is in D1368. The range is D100-D115 of ID# 14 PLC.
+D1907::SLAVE ID# 14 PLC LINK reads. Communication address for ID# 14 reads is in D1368. The range is D100-D115 of ID# 14 PLC.
+D1908::SLAVE ID# 14 PLC LINK reads. Communication address for ID# 14 reads is in D1368. The range is D100-D115 of ID# 14 PLC.
+D1909::SLAVE ID# 14 PLC LINK reads. Communication address for ID# 14 reads is in D1368. The range is D100-D115 of ID# 14 PLC.
+D1910::SLAVE ID# 14 PLC LINK reads. Communication address for ID# 14 reads is in D1368. The range is D100-D115 of ID# 14 PLC.
+D1911::SLAVE ID# 14 PLC LINK reads. Communication address for ID# 14 reads is in D1368. The range is D100-D115 of ID# 14 PLC.
+D1912::SLAVE ID# 14 PLC LINK writes. Communication address for ID# 14 writes is in D1428. The range is D200-D215 of ID# 14 PLC.
+D1913::SLAVE ID# 14 PLC LINK writes. Communication address for ID# 14 writes is in D1428. The range is D200-D215 of ID# 14 PLC.
+D1914::SLAVE ID# 14 PLC LINK writes. Communication address for ID# 14 writes is in D1428. The range is D200-D215 of ID# 14 PLC.
+D1915::SLAVE ID# 14 PLC LINK writes. Communication address for ID# 14 writes is in D1428. The range is D200-D215 of ID# 14 PLC.
+D1916::SLAVE ID# 14 PLC LINK writes. Communication address for ID# 14 writes is in D1428. The range is D200-D215 of ID# 14 PLC.
+D1917::SLAVE ID# 14 PLC LINK writes. Communication address for ID# 14 writes is in D1428. The range is D200-D215 of ID# 14 PLC.
+D1918::SLAVE ID# 14 PLC LINK writes. Communication address for ID# 14 writes is in D1428. The range is D200-D215 of ID# 14 PLC.
+D1919::SLAVE ID# 14 PLC LINK writes. Communication address for ID# 14 writes is in D1428. The range is D200-D215 of ID# 14 PLC.
+D1920::SLAVE ID# 14 PLC LINK writes. Communication address for ID# 14 writes is in D1428. The range is D200-D215 of ID# 14 PLC.
+D1921::SLAVE ID# 14 PLC LINK writes. Communication address for ID# 14 writes is in D1428. The range is D200-D215 of ID# 14 PLC.
+D1922::SLAVE ID# 14 PLC LINK writes. Communication address for ID# 14 writes is in D1428. The range is D200-D215 of ID# 14 PLC.
+D1923::SLAVE ID# 14 PLC LINK writes. Communication address for ID# 14 writes is in D1428. The range is D200-D215 of ID# 14 PLC.
+D1924::SLAVE ID# 14 PLC LINK writes. Communication address for ID# 14 writes is in D1428. The range is D200-D215 of ID# 14 PLC.
+D1925::SLAVE ID# 14 PLC LINK writes. Communication address for ID# 14 writes is in D1428. The range is D200-D215 of ID# 14 PLC.
+D1926::SLAVE ID# 14 PLC LINK writes. Communication address for ID# 14 writes is in D1428. The range is D200-D215 of ID# 14 PLC.
+D1927::SLAVE ID# 14 PLC LINK writes. Communication address for ID# 14 writes is in D1428. The range is D200-D215 of ID# 14 PLC.
+D1928::SLAVE ID# 15 PLC LINK reads. Communication address for ID# 15 reads is in D1369. The range is D100-D115 of ID# 15 PLC.
+D1929::SLAVE ID# 15 PLC LINK reads. Communication address for ID# 15 reads is in D1369. The range is D100-D115 of ID# 15 PLC.
+D1930::SLAVE ID# 15 PLC LINK reads. Communication address for ID# 15 reads is in D1369. The range is D100-D115 of ID# 15 PLC.
+D1931::SLAVE ID# 15 PLC LINK reads. Communication address for ID# 15 reads is in D1369. The range is D100-D115 of ID# 15 PLC.
+D1932::SLAVE ID# 15 PLC LINK reads. Communication address for ID# 15 reads is in D1369. The range is D100-D115 of ID# 15 PLC.
+D1933::SLAVE ID# 15 PLC LINK reads. Communication address for ID# 15 reads is in D1369. The range is D100-D115 of ID# 15 PLC.
+D1934::SLAVE ID# 15 PLC LINK reads. Communication address for ID# 15 reads is in D1369. The range is D100-D115 of ID# 15 PLC.
+D1935::SLAVE ID# 15 PLC LINK reads. Communication address for ID# 15 reads is in D1369. The range is D100-D115 of ID# 15 PLC.
+D1936::SLAVE ID# 15 PLC LINK reads. Communication address for ID# 15 reads is in D1369. The range is D100-D115 of ID# 15 PLC.
+D1937::SLAVE ID# 15 PLC LINK reads. Communication address for ID# 15 reads is in D1369. The range is D100-D115 of ID# 15 PLC.
+D1938::SLAVE ID# 15 PLC LINK reads. Communication address for ID# 15 reads is in D1369. The range is D100-D115 of ID# 15 PLC.
+D1939::SLAVE ID# 15 PLC LINK reads. Communication address for ID# 15 reads is in D1369. The range is D100-D115 of ID# 15 PLC.
+D1940::SLAVE ID# 15 PLC LINK reads. Communication address for ID# 15 reads is in D1369. The range is D100-D115 of ID# 15 PLC.
+D1941::SLAVE ID# 15 PLC LINK reads. Communication address for ID# 15 reads is in D1369. The range is D100-D115 of ID# 15 PLC.
+D1942::SLAVE ID# 15 PLC LINK reads. Communication address for ID# 15 reads is in D1369. The range is D100-D115 of ID# 15 PLC.
+D1943::SLAVE ID# 15 PLC LINK reads. Communication address for ID# 15 reads is in D1369. The range is D100-D115 of ID# 15 PLC.
+D1944::SLAVE ID# 15 PLC LINK writes. Communication address for ID# 15 writes is in D1429. The range is D200-D215 of ID# 15 PLC.
+D1945::SLAVE ID# 15 PLC LINK writes. Communication address for ID# 15 writes is in D1429. The range is D200-D215 of ID# 15 PLC.
+D1946::SLAVE ID# 15 PLC LINK writes. Communication address for ID# 15 writes is in D1429. The range is D200-D215 of ID# 15 PLC.
+D1947::SLAVE ID# 15 PLC LINK writes. Communication address for ID# 15 writes is in D1429. The range is D200-D215 of ID# 15 PLC.
+D1948::SLAVE ID# 15 PLC LINK writes. Communication address for ID# 15 writes is in D1429. The range is D200-D215 of ID# 15 PLC.
+D1949::SLAVE ID# 15 PLC LINK writes. Communication address for ID# 15 writes is in D1429. The range is D200-D215 of ID# 15 PLC.
+D1950::SLAVE ID# 15 PLC LINK writes. Communication address for ID# 15 writes is in D1429. The range is D200-D215 of ID# 15 PLC.
+D1951::SLAVE ID# 15 PLC LINK writes. Communication address for ID# 15 writes is in D1429. The range is D200-D215 of ID# 15 PLC.
+D1952::SLAVE ID# 15 PLC LINK writes. Communication address for ID# 15 writes is in D1429. The range is D200-D215 of ID# 15 PLC.
+D1953::SLAVE ID# 15 PLC LINK writes. Communication address for ID# 15 writes is in D1429. The range is D200-D215 of ID# 15 PLC.
+D1954::SLAVE ID# 15 PLC LINK writes. Communication address for ID# 15 writes is in D1429. The range is D200-D215 of ID# 15 PLC.
+D1955::SLAVE ID# 15 PLC LINK writes. Communication address for ID# 15 writes is in D1429. The range is D200-D215 of ID# 15 PLC.
+D1956::SLAVE ID# 15 PLC LINK writes. Communication address for ID# 15 writes is in D1429. The range is D200-D215 of ID# 15 PLC.
+D1957::SLAVE ID# 15 PLC LINK writes. Communication address for ID# 15 writes is in D1429. The range is D200-D215 of ID# 15 PLC.
+D1958::SLAVE ID# 15 PLC LINK writes. Communication address for ID# 15 writes is in D1429. The range is D200-D215 of ID# 15 PLC.
+D1959::SLAVE ID# 15 PLC LINK writes. Communication address for ID# 15 writes is in D1429. The range is D200-D215 of ID# 15 PLC.
+D1960::SLAVE ID# 16 PLC LINK reads. Communication address for ID# 16 reads is in D1370. The range is D100-D115 of ID# 16 PLC.
+D1961::SLAVE ID# 16 PLC LINK reads. Communication address for ID# 16 reads is in D1370. The range is D100-D115 of ID# 16 PLC.
+D1962::SLAVE ID# 16 PLC LINK reads. Communication address for ID# 16 reads is in D1370. The range is D100-D115 of ID# 16 PLC.
+D1963::SLAVE ID# 16 PLC LINK reads. Communication address for ID# 16 reads is in D1370. The range is D100-D115 of ID# 16 PLC.
+D1964::SLAVE ID# 16 PLC LINK reads. Communication address for ID# 16 reads is in D1370. The range is D100-D115 of ID# 16 PLC.
+D1965::SLAVE ID# 16 PLC LINK reads. Communication address for ID# 16 reads is in D1370. The range is D100-D115 of ID# 16 PLC.
+D1966::SLAVE ID# 16 PLC LINK reads. Communication address for ID# 16 reads is in D1370. The range is D100-D115 of ID# 16 PLC.
+D1967::SLAVE ID# 16 PLC LINK reads. Communication address for ID# 16 reads is in D1370. The range is D100-D115 of ID# 16 PLC.
+D1968::SLAVE ID# 16 PLC LINK reads. Communication address for ID# 16 reads is in D1370. The range is D100-D115 of ID# 16 PLC.
+D1969::SLAVE ID# 16 PLC LINK reads. Communication address for ID# 16 reads is in D1370. The range is D100-D115 of ID# 16 PLC.
+D1970::SLAVE ID# 16 PLC LINK reads. Communication address for ID# 16 reads is in D1370. The range is D100-D115 of ID# 16 PLC.
+D1971::SLAVE ID# 16 PLC LINK reads. Communication address for ID# 16 reads is in D1370. The range is D100-D115 of ID# 16 PLC.
+D1972::SLAVE ID# 16 PLC LINK reads. Communication address for ID# 16 reads is in D1370. The range is D100-D115 of ID# 16 PLC.
+D1973::SLAVE ID# 16 PLC LINK reads. Communication address for ID# 16 reads is in D1370. The range is D100-D115 of ID# 16 PLC.
+D1974::SLAVE ID# 16 PLC LINK reads. Communication address for ID# 16 reads is in D1370. The range is D100-D115 of ID# 16 PLC.
+D1975::SLAVE ID# 16 PLC LINK reads. Communication address for ID# 16 reads is in D1370. The range is D100-D115 of ID# 16 PLC.
+D1976::SLAVE ID# 16 PLC LINK writes. Communication address for ID# 16 writes is in D1430. The range is D200-D215 of ID# 16 PLC.
+D1977::SLAVE ID# 16 PLC LINK writes. Communication address for ID# 16 writes is in D1430. The range is D200-D215 of ID# 16 PLC.
+D1978::SLAVE ID# 16 PLC LINK writes. Communication address for ID# 16 writes is in D1430. The range is D200-D215 of ID# 16 PLC.
+D1979::SLAVE ID# 16 PLC LINK writes. Communication address for ID# 16 writes is in D1430. The range is D200-D215 of ID# 16 PLC.
+D1980::SLAVE ID# 16 PLC LINK writes. Communication address for ID# 16 writes is in D1430. The range is D200-D215 of ID# 16 PLC.
+D1981::SLAVE ID# 16 PLC LINK writes. Communication address for ID# 16 writes is in D1430. The range is D200-D215 of ID# 16 PLC.
+D1982::SLAVE ID# 16 PLC LINK writes. Communication address for ID# 16 writes is in D1430. The range is D200-D215 of ID# 16 PLC.
+D1983::SLAVE ID# 16 PLC LINK writes. Communication address for ID# 16 writes is in D1430. The range is D200-D215 of ID# 16 PLC.
+D1984::SLAVE ID# 16 PLC LINK writes. Communication address for ID# 16 writes is in D1430. The range is D200-D215 of ID# 16 PLC.
+D1985::SLAVE ID# 16 PLC LINK writes. Communication address for ID# 16 writes is in D1430. The range is D200-D215 of ID# 16 PLC.
+D1986::SLAVE ID# 16 PLC LINK writes. Communication address for ID# 16 writes is in D1430. The range is D200-D215 of ID# 16 PLC.
+D1987::SLAVE ID# 16 PLC LINK writes. Communication address for ID# 16 writes is in D1430. The range is D200-D215 of ID# 16 PLC.
+D1988::SLAVE ID# 16 PLC LINK writes. Communication address for ID# 16 writes is in D1430. The range is D200-D215 of ID# 16 PLC.
+D1989::SLAVE ID# 16 PLC LINK writes. Communication address for ID# 16 writes is in D1430. The range is D200-D215 of ID# 16 PLC.
+D1990::SLAVE ID# 16 PLC LINK writes. Communication address for ID# 16 writes is in D1430. The range is D200-D215 of ID# 16 PLC.
+D1991::SLAVE ID# 16 PLC LINK writes. Communication address for ID# 16 writes is in D1430. The range is D200-D215 of ID# 16 PLC.
